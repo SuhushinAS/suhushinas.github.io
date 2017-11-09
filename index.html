@@ -39,9 +39,9 @@
         }
         .offset_b_20 {
             bottom: 20px;
-            left: 20px;
-            right: 20px;
-            top: 20px;
+        }
+        .slide {
+            padding-top: 20px;
         }
         .slide_gray {
             background-color: #e1e3e4;
@@ -56,8 +56,8 @@
     </header>
 
     <section class="slide" id="intro">
-        <h2>Дизайн-система.<br/>Как подружить дизайн и front-end.</h2>
-        <p>Сухушин Александр, <a href="https://userstory.ru/">USERSTORY</a></p>
+        <h2 style="margin-top: 20%;">Дизайн-система.<br/>Как подружить дизайн и front-end.</h2>
+        <p>Сухушин Александр, <a href="https://userstory.ru/" target="_blank">USERSTORY</a></p>
     </section>
 
     <section class="slide" id="frontend">
@@ -72,15 +72,15 @@
 
     <section class="slide" id="design-system">
         <h2>Дизайн-система</h2>
-        <figure>
+        <figure style="margin-top: 20%;">
             <blockquote>
                 <p>Это постоянно эволюционирующий свод правил, который определяет порядок создания продукта.</p>
             </blockquote>
-            <figcaption><a href="https://habrahabr.ru/company/everydaytools/blog/324774/">https://habrahabr.ru/company/everydaytools/blog/324774/</a></figcaption>
+            <figcaption><a href="https://habrahabr.ru/company/everydaytools/blog/324774/" target="_blank">https://habrahabr.ru/company/everydaytools/blog/324774/</a></figcaption>
         </figure>
     </section>
 
-    <section class="slide" id="layer-0">
+    <section class="slide" id="layer-0-color">
         <div class="layout">
             <div class="layout__row">
                 <div class="layout__col">
@@ -90,7 +90,41 @@
             <div class="layout__row  layout__row_full">
                 <div class="layout__col">
                     <div class="layout-cover offset_b_20">
-                        <img class="cover" src="pictures/layer-0.png" alt="Слой 0 - Палитра">
+                        <img class="cover" src="pictures/layer-0-color.png" alt="Слой 0 - Цвет">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="layer-0-size">
+        <div class="layout">
+            <div class="layout__row">
+                <div class="layout__col">
+                    <h2>Слой 0 - "Палитра"</h2>
+                </div>
+            </div>
+            <div class="layout__row  layout__row_full">
+                <div class="layout__col">
+                    <div class="layout-cover offset_b_20">
+                        <img class="cover" src="pictures/layer-0-size.png" alt="Слой 0 - Размеры">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="layer-0-text">
+        <div class="layout">
+            <div class="layout__row">
+                <div class="layout__col">
+                    <h2>Слой 0 - "Палитра"</h2>
+                </div>
+            </div>
+            <div class="layout__row  layout__row_full">
+                <div class="layout__col">
+                    <div class="layout-cover offset_b_20">
+                        <img class="cover" src="pictures/layer-0-text.png" alt="Слой 0 - Текст">
                     </div>
                 </div>
             </div>
@@ -133,7 +167,7 @@
 
     <section class="slide" id="rules">
         <h2>Правила</h2>
-        <ul>
+        <ul style="margin-top: 20%;">
             <li>От общего к частному;</li>
             <li class="next">Описание разбивается на слои;</li>
             <li class="next">Для каждой сущности определяется псевдоним;</li>
@@ -209,7 +243,7 @@
         </div>
     </section>
 
-    <section class="slide" id="example-4-float">
+    <section class="slide" id="example-4-responsive">
         <div class="layout">
             <div class="layout__row">
                 <div class="layout__col">
@@ -219,7 +253,58 @@
             <div class="layout__row  layout__row_full">
                 <div class="layout__col">
                     <div class="layout-cover offset_b_20">
-                        <img class="cover" src="pictures/example-5-width.png" alt="Миксины">
+                        <img class="cover" src="pictures/example-4-responsive.png" alt="Адаптив">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="example-5-margin">
+        <div class="layout">
+            <div class="layout__row">
+                <div class="layout__col">
+                    <h2>Примеры</h2>
+                </div>
+            </div>
+            <div class="layout__row  layout__row_full">
+                <div class="layout__col">
+                    <div class="layout-cover offset_b_20">
+                        <img class="cover" src="pictures/example-5-margin.png" alt="Отступы">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="example-6-float">
+        <div class="layout">
+            <div class="layout__row">
+                <div class="layout__col">
+                    <h2>Примеры</h2>
+                </div>
+            </div>
+            <div class="layout__row  layout__row_full">
+                <div class="layout__col">
+                    <div class="layout-cover offset_b_20">
+                        <img class="cover" src="pictures/example-6-float.png" alt="Обтекание">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="example-7-width">
+        <div class="layout">
+            <div class="layout__row">
+                <div class="layout__col">
+                    <h2>Примеры</h2>
+                </div>
+            </div>
+            <div class="layout__row  layout__row_full">
+                <div class="layout__col">
+                    <div class="layout-cover offset_b_20">
+                        <img class="cover" src="pictures/example-7-width.png" alt="Ширина">
                     </div>
                 </div>
             </div>
@@ -228,11 +313,11 @@
 
     <section class="slide" id="profit">
         <h2>Преимущества</h2>
-        <ul>
+        <ul style="margin-top: 20%;">
             <li>Повторное использование;</li>
             <li class="next">Уменьшение накладных расходов;</li>
             <li class="next">Проще поддерживать и контролировать;</li>
-            <li class="next">Параллельное описание дизайна и вёрстка;</li>
+            <li class="next">Параллельное описание дизайна и вёрстка.</li>
         </ul>
     </section>
 
