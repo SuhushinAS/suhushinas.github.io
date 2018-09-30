@@ -1,4 +1,12 @@
 export default class Mouse {
+    handleMove = (e) => {
+        e.preventDefault();
+        const clientX = e.clientX || e.targetTouches[0].clientX;
+        const clientY = e.clientY || e.targetTouches[0].clientY;
+        this.x = clientX - this.rect.left;
+        this.y = clientY - this.rect.top;
+    };
+
     constructor(canvas) {
         this.canvas = canvas;
         this.rect = this.canvas.getBoundingClientRect();
@@ -13,9 +21,4 @@ export default class Mouse {
         this.canvas.removeEventListener('touchmove', this.handleMove);
         this.canvas.addEventListener('touchmove', this.handleMove);
     }
-
-    handleMove = (e) => {
-        this.x = e.clientX - this.rect.left;
-        this.y = e.clientY - this.rect.top;
-    };
 }
