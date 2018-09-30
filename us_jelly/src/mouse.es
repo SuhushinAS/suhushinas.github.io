@@ -10,6 +10,8 @@ export default class Mouse {
     bind() {
         this.canvas.removeEventListener('mousemove', this.handleMove);
         this.canvas.addEventListener('mousemove', this.handleMove);
+        this.canvas.removeEventListener('touchmove', this.handleMove);
+        this.canvas.addEventListener('touchmove', this.handleMove);
     }
 
     handleMove = (e) => {
