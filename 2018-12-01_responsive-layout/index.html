@@ -6,34 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="node_modules/shower-ribbon/styles/styles.css">
     <style>
+        body {
+
+        }
         .shower {
             --slide-ratio: calc(16 / 9);
+            --slide-width: 1024px;
         }
+        .f-sz_xxl {
+            font-size: 90px;
+        }
+        .h_full {
+            height: 100%;
+        }
+        .hor__item {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .hor__item_w {
+            width: 25%;
+        }
+        .box {
+            display: table;
+            height: 100%;
+            position: relative;
+            width: 100%;
+        }
+        .box_cover {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .row {
+            display: table-row;
+            position: relative;
+        }
+        .col {
+            display: table-cell;
+            position: relative;
+        }
+        .offset_20 {
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            top: 20px;
+        }
+        .offset_b_20 {
+            bottom: 20px;
+        }
+        .box_gray {
+            background-color: #e1e3e4;
+        }
+        .m_h_20 {
+            margin: 0 20px;
+        }
+        .m_v_20 {
+            margin: 20px 0;
+        }
+        .m_20 {
+            margin: 20px;
+        }
+        .p-t_20 {
+            padding-top: 20px;
+        }
+        .t-a_c {
+            text-align: center;
+        }
+        .w_full {
+            width: 100%;
+        }
+    </style>
+    <style>
     </style>
 </head>
 <body class="shower list">
 
     <header class="caption">
-        <h1>Адаптивная вёрстка</h1>
+        <h1 >Адаптивная вёрстка</h1>
         <p>Сухушин Александр</p>
     </header>
 
     <section class="slide" id="intro">
         <h2>Адаптивная вёрстка</h2>
         <p><em>Сухушин Александр</em> <a class="link_us" data-title="USERSTORY" href="https://userstory.ru/" rel="noopener noreferrer" target="_blank">USERSTORY</a></p>
-        <div class="cover">
-            <img class="place" src="/pictures/intro-1.jpg" alt="Hands on the orange typewriter in a park">
-        </div>
         <style>
+            #intro {
+                background-image: url("/pictures/intro-1.jpg");
+                background-position: 50% 50%;
+                background-size: cover;
+            }
             #intro h2 {
-                margin: 30px 0 0;
+                margin: 36px 0 0;
                 color: white;
                 text-align: center;
+                text-shadow: 0 0 1px rgba(0,0,0,0.5);
                 font-size: 70px;
             }
 
             #intro p {
-                margin: 10px 0 0;
+                margin: 24px 0 0;
                 text-align: center;
                 color: white;
                 font-size: 20px;
@@ -112,59 +185,107 @@
     </section>
 
     <section class="slide">
-        <h2>Что значит адаптивный?</h2>
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Что значит адаптивный?</h2>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="slide">
-        <h2>Что значит адаптивный?</h2>
-        <p>
-            <b>Адаптивный веб-дизайн</b>— дизайн веб-страниц,
-            обеспечивающий правильное отображение сайта на различных устройствах,
-            подключённых к интернету и динамически подстраивающийся под заданные размеры окна браузера.
-        </p>
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Что значит адаптивный?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <p>
+                        <b>Адаптивный веб-дизайн</b>— дизайн веб-страниц,
+                        обеспечивающий правильное отображение сайта на различных устройствах,
+                        подключённых к интернету и динамически подстраивающийся под заданные размеры окна браузера.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="slide">
-        <h2>Зачем это нужно?</h2>
-    </section>
-
-    <section class="slide">
-        <h2>Зачем это нужно?</h2>
-        <p>
-            Целью адаптивного веб-дизайна является универсальность отображения содержимого веб-сайта для различных устройств.
-            Для того, чтобы веб-сайт был удобно просматриваемым с устройств форматов и с экранами различных разрешений,
-            по технологии адаптивного веб-дизайна не нужно создавать отдельные версии веб-сайта для отдельных видов устройств.
-            Один сайт может работать на смартфоне, планшете, ноутбуке и телевизоре с выходом в интернет, то есть на всем спектре устройств.
-        </p>
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Зачем это нужно?</h2>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="slide" id="stats">
-        <h2>Зачем это нужно?</h2>
-        <a href="http://gs.statcounter.com/platform-market-share/desktop-mobile-tablet" rel="noopener noreferrer" target="_blank">
-            <img src="/pictures/StatCounter-comparison-ww-monthly-201710-201810.png" alt="Зачем это нужно?">
-        </a>
-        <style>
-            #stats img {
-                /*max-height: 50%;*/
-                display: block;
-                max-width: 85%;
-                margin: auto;
-            }
-        </style>
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Зачем это нужно?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <a href="http://gs.statcounter.com/platform-market-share/desktop-mobile-tablet" rel="noopener noreferrer" target="_blank">
+                            <img class="cover" src="/pictures/StatCounter-comparison-ww-monthly-201710-201810.png" alt="Зачем это нужно?">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="slide">
-        <h2>Как проверять?</h2>
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Как проверять?</h2>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="slide">
-        <h2>Как проверять?</h2>
-        <p>
-            Целью адаптивного веб-дизайна является универсальность отображения содержимого веб-сайта для различных устройств.
-            Для того, чтобы веб-сайт был удобно просматриваемым с устройств форматов и с экранами различных разрешений,
-            по технологии адаптивного веб-дизайна не нужно создавать отдельные версии веб-сайта для отдельных видов устройств.
-            Один сайт может работать на смартфоне, планшете, ноутбуке и телевизоре с выходом в интернет, то есть на всем спектре устройств.
-        </p>
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Как проверять?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <ul>
+                        <li>
+                            <a href="https://my.userstory.ru/" rel="noopener noreferrer" target="_blank">
+                                Chrome DevTools
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://userstory.ru/" rel="noopener noreferrer" target="_blank">
+                                Remote devices
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://192.168.77.116:1337/" rel="noopener noreferrer" target="_blank">
+                                Vorlon.JS
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.browserstack.com/" rel="noopener noreferrer" target="_blank">
+                                BrowserStack
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
 
