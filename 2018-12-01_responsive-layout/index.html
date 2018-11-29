@@ -9,29 +9,36 @@
         body {
 
         }
+
         .shower {
             --slide-ratio: calc(16 / 9);
             --slide-width: 1024px;
         }
+
         .f-sz_xxl {
             font-size: 90px;
         }
+
         .h_full {
             height: 100%;
         }
+
         .hor__item {
             display: inline-block;
             vertical-align: middle;
         }
+
         .hor__item_w {
             width: 25%;
         }
+
         .box {
             display: table;
             height: 100%;
             position: relative;
             width: 100%;
         }
+
         .box_cover {
             bottom: 0;
             left: 0;
@@ -39,41 +46,52 @@
             right: 0;
             top: 0;
         }
+
         .row {
             display: table-row;
             position: relative;
         }
+
         .col {
             display: table-cell;
             position: relative;
         }
+
         .offset_20 {
             bottom: 20px;
             left: 20px;
             right: 20px;
             top: 20px;
         }
+
         .offset_b_20 {
             bottom: 20px;
         }
+
         .box_gray {
             background-color: #e1e3e4;
         }
+
         .m_h_20 {
             margin: 0 20px;
         }
+
         .m_v_20 {
             margin: 20px 0;
         }
+
         .m_20 {
             margin: 20px;
         }
+
         .p-t_20 {
             padding-top: 20px;
         }
+
         .t-a_c {
             text-align: center;
         }
+
         .w_full {
             width: 100%;
         }
@@ -84,24 +102,28 @@
 <body class="shower list">
 
     <header class="caption">
-        <h1 >Адаптивная вёрстка</h1>
+        <h1>Адаптивная вёрстка</h1>
         <p>Сухушин Александр</p>
     </header>
 
     <section class="slide" id="intro">
         <h2>Адаптивная вёрстка</h2>
-        <p><em>Сухушин Александр</em> <a class="link_us" data-title="USERSTORY" href="https://userstory.ru/" rel="noopener noreferrer" target="_blank">USERSTORY</a></p>
+        <p>
+            <em>Сухушин Александр</em>
+            <a class="link_us" data-title="USERSTORY" href="https://userstory.ru/" rel="noopener noreferrer" target="_blank">USERSTORY</a>
+        </p>
         <style>
             #intro {
                 background-image: url("/pictures/intro-1.jpg");
                 background-position: 50% 50%;
                 background-size: cover;
             }
+
             #intro h2 {
                 margin: 36px 0 0;
                 color: white;
                 text-align: center;
-                text-shadow: 0 0 1px rgba(0,0,0,0.5);
+                text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
                 font-size: 70px;
             }
 
@@ -115,6 +137,7 @@
             #cover p a {
                 color: white;
             }
+
             .link_us {
                 display: inline-block;
                 font-family: sans-serif;
@@ -123,6 +146,7 @@
                 line-height: 18.18px;
                 position: relative;
             }
+
             .link_us,
             .link_us:after,
             .link_us:before {
@@ -130,6 +154,7 @@
                 transition: all 900ms ease, color 450ms ease 750ms, background-color 450ms ease 750ms, font-weight ease 450ms;
                 width: 98.98px;
             }
+
             .link_us:after,
             .link_us:before {
                 overflow: hidden;
@@ -143,6 +168,7 @@
                 top: 0;
                 width: 98.98px;
             }
+
             .link_us:after {
                 color: transparent;
                 content: attr(data-title);
@@ -152,12 +178,14 @@
                 text-align: center;
                 word-break: break-all;
             }
+
             .link_us:focus,
             .link_us:hover {
                 color: transparent;
                 font-weight: 600;
                 transition: all 900ms ease 300ms, color 450ms ease, background-color 450ms ease, font-weight 0ms ease 300ms;
             }
+
             .link_us:focus:after,
             .link_us:focus:before,
             .link_us:hover:after,
@@ -166,10 +194,12 @@
                 pointer-events: all;
                 transition: all 900ms ease 300ms, color 450ms ease, background-color 450ms ease;
             }
+
             .link_us:focus:before,
             .link_us:hover:before {
                 background-color: #000000;
             }
+
             .link_us:focus:after,
             .link_us:hover:after {
                 color: #ffffff;
@@ -204,7 +234,7 @@
             <div class="row h_full">
                 <div class="col">
                     <p>
-                        <b>Адаптивный веб-дизайн</b>— дизайн веб-страниц,
+                        <b>Адаптивный веб-дизайн</b> — дизайн веб-страниц,
                         обеспечивающий правильное отображение сайта на различных устройствах,
                         подключённых к интернету и динамически подстраивающийся под заданные размеры окна браузера.
                     </p>
@@ -346,26 +376,15 @@
             <div class="row h_full">
                 <div class="col">
                     <div class="box_cover offset_b_20">
-                        <iframe class="h_full w_full" scrolling='no' title='Word wrap' src='//codepen.io/SuhushinAS/embed/LXZXbG/?theme-id=dark&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true'>See the Pen <a href='https://codepen.io/SuhushinAS/pen/LXZXbG/'>Word wrap</a> by SuhushinAS (<a href='https://codepen.io/SuhushinAS'>@SuhushinAS</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="slide">
-        <div class="box">
-            <div class="row">
-                <div class="col">
-                    <h2>Контейнер</h2>
-                </div>
-            </div>
-            <div class="row h_full">
-                <div class="col">
-                    <div class="box_cover offset_b_20">
-                        <iframe class="h_full w_full" scrolling='no' title='Container' src='//codepen.io/SuhushinAS/embed/bQeQzQ/?theme-id=dark&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true'>See the Pen <a href='https://codepen.io/SuhushinAS/pen/bQeQzQ/'>Container</a> by SuhushinAS (<a href='https://codepen.io/SuhushinAS'>@SuhushinAS</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Word wrap"
+                                src="//codepen.io/SuhushinAS/embed/LXZXbG/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/LXZXbG/">Word wrap</a>.
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -382,8 +401,15 @@
             <div class="row h_full">
                 <div class="col">
                     <div class="box_cover offset_b_20">
-                        <iframe class="h_full w_full" scrolling='no' title='Responsive images' src='//codepen.io/SuhushinAS/embed/MzeZqb/?theme-id=dark&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true'>See the Pen <a href='https://codepen.io/SuhushinAS/pen/MzeZqb/'>Responsive images</a> by SuhushinAS (<a href='https://codepen.io/SuhushinAS'>@SuhushinAS</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Responsive images"
+                                src="//codepen.io/SuhushinAS/embed/qQMJKb/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/qQMJKb/">Responsive images</a>.
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -394,14 +420,147 @@
         <div class="box">
             <div class="row">
                 <div class="col">
-                    <h2>Ещё отзывчивые изображения</h2>
+                    <h2>Пропорции</h2>
                 </div>
             </div>
             <div class="row h_full">
                 <div class="col">
                     <div class="box_cover offset_b_20">
-                        <iframe class="h_full w_full" scrolling='no' title='Retina images' src='//codepen.io/SuhushinAS/embed/qQMJKb/?theme-id=dark&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true'>See the Pen <a href='https://codepen.io/SuhushinAS/pen/qQMJKb/'>Retina images</a> by SuhushinAS (<a href='https://codepen.io/SuhushinAS'>@SuhushinAS</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Aspect Ratio"
+                                src="//codepen.io/SuhushinAS/embed/EOyrjL/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/EOyrjL/">Aspect Ratio</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Контейнер</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Container"
+                                src="//codepen.io/SuhushinAS/embed/bQeQzQ/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/bQeQzQ/">Container</a>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Колонки</h2>
+                    <!--Добавить div-колонки-->
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Float"
+                                src="//codepen.io/SuhushinAS/embed/mQEvZr/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/mQEvZr/">Float</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Резиновый макет</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Rubber Layout"
+                                src="//codepen.io/SuhushinAS/embed/dQzNoz/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/dQzNoz/">Rubber Layout</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Flex</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Flex"
+                                src="//codepen.io/SuhushinAS/embed/MzvOag/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/MzvOag/">Flex</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Media-запросы</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Media query intro"
+                                src="//codepen.io/SuhushinAS/embed/KrvJbb/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/KrvJbb/">Media query intro</a>.
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -414,14 +573,20 @@
 
     <section class="slide">
         <h2>Plain text on your slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat.
+            Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
     </section>
 
     <section class="slide">
         <h2>Two columns if you like</h2>
         <div class="columns two">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
         </div>
     </section>
 
@@ -445,7 +610,10 @@
         <h2>Serious citations</h2>
         <figure>
             <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
             </blockquote>
             <figcaption>Marcus Tullius Cicero</figcaption>
         </figure>
@@ -552,6 +720,5 @@
 
     <script src="node_modules/shower-core/shower.min.js"></script>
     <!-- Copyright © 2018 Yours Truly, Famous Inc. -->
-
 </body>
 </html>
