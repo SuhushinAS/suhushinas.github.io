@@ -95,6 +95,79 @@
         .w_full {
             width: 100%;
         }
+
+        .link_us {
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18.18px;
+            position: relative;
+        }
+
+        .link_us,
+        .link_us:after,
+        .link_us:before {
+            height: 18.18px;
+            transition: all 900ms ease, color 450ms ease 750ms, background-color 450ms ease 750ms, font-weight ease 450ms;
+            width: 98.98px;
+        }
+
+        .link_us:after,
+        .link_us:before {
+            overflow: hidden;
+            content: '';
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 98.98px;
+        }
+
+        .link_us:after {
+            color: transparent;
+            content: attr(data-title);
+            font-size: 16px;
+            line-height: 18.18px;
+            position: absolute;
+            text-align: center;
+            word-break: break-all;
+        }
+
+        .link_us:focus,
+        .link_us:hover {
+            color: transparent;
+            font-weight: 600;
+            transition: all 900ms ease 300ms, color 450ms ease, background-color 450ms ease, font-weight 0ms ease 300ms;
+        }
+
+        .link_us:focus:after,
+        .link_us:focus:before,
+        .link_us:hover:after,
+        .link_us:hover:before {
+            height: 98.98px;
+            pointer-events: all;
+            transition: all 900ms ease 300ms, color 450ms ease, background-color 450ms ease;
+        }
+
+        .link_us:focus:before,
+        .link_us:hover:before {
+            background-color: #000000;
+        }
+
+        .link_us:focus:after,
+        .link_us:hover:after {
+            color: #ffffff;
+            font-size: 20px;
+            left: 7px;
+            letter-spacing: 15px;
+            line-height: 29px;
+            box-sizing: border-box;
+            top: 14px;
+        }
     </style>
     <style>
     </style>
@@ -120,97 +193,26 @@
             }
 
             #intro h2 {
-                margin: 36px 0 0;
+                margin-left: -40px;
+                margin-top: -38px;
                 color: white;
                 text-align: center;
-                text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+                text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
                 font-size: 70px;
             }
 
             #intro p {
-                margin: 24px 0 0;
+                margin-left: -40px;
+                margin-top: 36px;
                 text-align: center;
-                color: white;
+                color: #223138;
                 font-size: 20px;
             }
 
-            #cover p a {
-                color: white;
+            #intro p a {
+                background-image: none;
+                color: #3d575f;
             }
-
-            .link_us {
-                display: inline-block;
-                font-family: sans-serif;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 18.18px;
-                position: relative;
-            }
-
-            .link_us,
-            .link_us:after,
-            .link_us:before {
-                height: 18.18px;
-                transition: all 900ms ease, color 450ms ease 750ms, background-color 450ms ease 750ms, font-weight ease 450ms;
-                width: 98.98px;
-            }
-
-            .link_us:after,
-            .link_us:before {
-                overflow: hidden;
-                content: '';
-                bottom: 0;
-                left: 0;
-                margin: auto;
-                pointer-events: none;
-                position: absolute;
-                right: 0;
-                top: 0;
-                width: 98.98px;
-            }
-
-            .link_us:after {
-                color: transparent;
-                content: attr(data-title);
-                font-size: 16px;
-                line-height: 18.18px;
-                position: absolute;
-                text-align: center;
-                word-break: break-all;
-            }
-
-            .link_us:focus,
-            .link_us:hover {
-                color: transparent;
-                font-weight: 600;
-                transition: all 900ms ease 300ms, color 450ms ease, background-color 450ms ease, font-weight 0ms ease 300ms;
-            }
-
-            .link_us:focus:after,
-            .link_us:focus:before,
-            .link_us:hover:after,
-            .link_us:hover:before {
-                height: 98.98px;
-                pointer-events: all;
-                transition: all 900ms ease 300ms, color 450ms ease, background-color 450ms ease;
-            }
-
-            .link_us:focus:before,
-            .link_us:hover:before {
-                background-color: #000000;
-            }
-
-            .link_us:focus:after,
-            .link_us:hover:after {
-                color: #ffffff;
-                font-size: 20px;
-                left: 7px;
-                letter-spacing: 15px;
-                line-height: 29px;
-                box-sizing: border-box;
-                top: 14px;
-            }
-
         </style>
     </section>
 
@@ -218,7 +220,7 @@
         <div class="box">
             <div class="row">
                 <div class="col">
-                    <h2>Что значит адаптивный?</h2>
+                    <h2>Что значит "адаптивный"?</h2>
                 </div>
             </div>
         </div>
@@ -228,7 +230,7 @@
         <div class="box">
             <div class="row">
                 <div class="col">
-                    <h2>Что значит адаптивный?</h2>
+                    <h2>Что значит "адаптивный"?</h2>
                 </div>
             </div>
             <div class="row h_full">
@@ -243,7 +245,7 @@
         </div>
     </section>
 
-    <section class="slide">
+    <!--<section class="slide">
         <div class="box">
             <div class="row">
                 <div class="col">
@@ -270,7 +272,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <section class="slide">
         <div class="box">
@@ -662,6 +664,30 @@
                 <div class="col">
                     <div class="box_cover offset_b_20">
                         <img class="cover" src="pictures/grid-system-example.png" alt="Модульные сетки">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Bootstrap</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Bootstrap"
+                                src="//codepen.io/SuhushinAS/embed/vQMxGK/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/vQMxGK/">Bootstrap</a>.
+</iframe>
                     </div>
                 </div>
             </div>
