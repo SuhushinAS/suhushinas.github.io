@@ -3,7 +3,9 @@
 <head>
     <title>Shower Presentation Engine</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1">
     <link rel="stylesheet" href="node_modules/shower-ribbon/styles/styles.css">
     <style>
         body {
@@ -15,8 +17,16 @@
             --slide-width: 1024px;
         }
 
-        .f-sz_xxl {
+        .f-z_xxl {
             font-size: 90px;
+        }
+
+        .f-z_s {
+            font-size: 18px;
+        }
+
+        .f-z_xs {
+            font-size: 16px;
         }
 
         .h_full {
@@ -312,6 +322,35 @@
         <div class="box">
             <div class="row">
                 <div class="col">
+                    <h2>Viewport</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <pre class="f-z_s">
+                            <code>...</code>
+                            <code>    &lt;head&gt;</code>
+                            <code>        &lt;meta</code>
+                            <code>              name="<mark>viewport</mark>"</code>
+                            <code>              content="<mark>width=device-width</mark>,</code>
+                            <code>                       <mark>initial-scale=1.0</mark>,</code>
+                            <code>                       <mark>maximum-scale=1.0</mark>,</code>
+                            <code>                       <mark>minimum-scale=1.0</mark>" /&gt;</code>
+                            <code>        ...</code>
+                            <code>    &lt;/head&gt;</code>
+                            <code>...</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
                     <h2>Единицы измерения</h2>
                 </div>
             </div>
@@ -334,6 +373,30 @@
                             <b>vw</b> - процент от ширины экрана
                         </li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Волшебный checkbox</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Checkbox"
+                                src="//codepen.io/SuhushinAS/embed/PxrBJg/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/PxrBJg/">Checkbox</a>.
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>
