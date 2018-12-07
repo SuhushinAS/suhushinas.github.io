@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+
+        .slide {
+            color: #28282a;
+        }
+
+        .f-sz_xxl {
+            font-size: 90px;
+        }
+
+        .hor__item {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .hor__item_w {
+            width: 25%;
+        }
+
+        .layout {
+            display: table;
+            height: 100%;
+            position: relative;
+            width: 100%;
+        }
+
+        .layout__row {
+            display: table-row;
+            position: relative;
+        }
+
+        .layout__row_full {
+            height: 100%;
+        }
+
+        .layout__col {
+            display: table-cell;
+            position: relative;
+        }
+
+        .layout-cover {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .offset_20 {
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            top: 20px;
+        }
+
+        .offset_b_20 {
+            bottom: 20px;
+        }
+
+        .slide_gray {
+            background-color: #e1e3e4;
+        }
+
+        .m_h_20 {
+            margin: 0 20px;
+        }
+
+        .m_v_20 {
+            margin: 20px 0;
+        }
+
+        .m_20 {
+            margin: 20px;
+        }
+
+        .p-t_20 {
+            padding-top: 20px;
+        }
+
+        .t-a_c {
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Интеграция карт Leaflet с React</h1>
+        <p>Сухушин Александр, Frontend-разработчик Userstory.</p>
+    </header>
+
+<section class="slide" id="intro">
+    <h2 class="m_v_20">Интеграция карт Leaflet с React</h2>
+    <div class="hor t-a_c f-sz_xxl m_v_20">
+        <img class="hor__item hor__item_w" src="pictures/leaflet.svg" alt="leaflet">
+        <span class="hor__item">+</span>
+        <img class="hor__item hor__item_w" src="pictures/react.svg" alt="react">
+    </div>
+    <p>
+        <a href="https://suhushinas.github.io/">Сухушин Александр</a>,
+        Frontend-разработчик Userstory.
+    </p>
+    <style>
+        #intro h2 {
+            text-align: center;
+            font-size: 70px;
+        }
+
+        #intro p {
+            margin: 10px 0 0;
+            text-align: center;
+            font-style: italic;
+            font-size: 20px;
+        }
+    </style>
+</section>
+
+    <!--<section class="slide p-t_20" id="overview-location">
+        <div class="layout">
+            <div class="layout__row">
+                <div class="layout__col">
+                    <h2>MAG Delivery &mdash; Локация</h2>
+                </div>
+            </div>
+            <div class="layout__row  layout__row_full">
+                <div class="layout__col">
+                    <div class="layout-cover offset_b_20">
+                        <img class="cover" src="pictures/overview-location.png" alt="MAG Delivery">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide p-t_20" id="overview-geozone-list">
+        <div class="layout">
+            <div class="layout__row">
+                <div class="layout__col">
+                    <h2>MAG Delivery &mdash; Геозона</h2>
+                </div>
+            </div>
+            <div class="layout__row  layout__row_full">
+                <div class="layout__col">
+                    <div class="layout-cover offset_b_20">
+                        <img class="cover" src="pictures/overview-geozone-list.png" alt="MAG Delivery">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide p-t_20" id="overview-geozone-edit">
+        <div class="layout">
+            <div class="layout__row">
+                <div class="layout__col">
+                    <h2>MAG Delivery &mdash; Геозона</h2>
+                </div>
+            </div>
+            <div class="layout__row  layout__row_full">
+                <div class="layout__col">
+                    <div class="layout-cover offset_b_20">
+                        <img class="cover" src="pictures/overview-geozone-edit.png" alt="MAG Delivery">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide p-t_20" id="overview-coverage-edit">
+        <div class="layout">
+            <div class="layout__row">
+                <div class="layout__col">
+                    <h2>MAG Delivery &mdash; Покрытие</h2>
+                </div>
+            </div>
+            <div class="layout__row  layout__row_full">
+                <div class="layout__col">
+                    <div class="layout-cover offset_b_20">
+                        <img class="cover" src="pictures/overview-coverage-edit.png" alt="MAG Delivery">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide p-t_20" id="overview-warehouse-edit">
+        <div class="layout">
+            <div class="layout__row">
+                <div class="layout__col">
+                    <h2>MAG Delivery &mdash; Склад</h2>
+                </div>
+            </div>
+            <div class="layout__row  layout__row_full">
+                <div class="layout__col">
+                    <div class="layout-cover offset_b_20">
+                        <img class="cover" src="pictures/overview-warehouse-edit.png" alt="MAG Delivery">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide p-t_20" id="overview-warehouse-view">
+        <div class="layout">
+            <div class="layout__row">
+                <div class="layout__col">
+                    <h2>MAG Delivery &mdash; Склад</h2>
+                </div>
+            </div>
+            <div class="layout__row  layout__row_full">
+                <div class="layout__col">
+                    <div class="layout-cover offset_b_20">
+                        <img class="cover" src="pictures/overview-warehouse-view.png" alt="MAG Delivery">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide p-t_20" id="overview-future">
+        <div class="layout">
+            <div class="layout__row">
+                <div class="layout__col">
+                    <h2>MAG Delivery &mdash; Планы на будущее</h2>
+                </div>
+            </div>
+            <div class="layout__row  layout__row_full">
+                <div class="layout__col">
+                    <div class="layout-cover offset_b_20">
+                        <img class="cover" src="pictures/overview-future.png" alt="MAG Delivery">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+<section class="slide slide_gray" id="leaflet-overview">
+    <div class="layout-cover">
+        <img class="cover" src="pictures/leaflet-overview.png" alt="Leaflet">
+    </div>
+</section>
+
+<section class="slide slide_gray" id="leaflet-usage">
+    <div class="layout-cover">
+        <img class="cover" src="pictures/leaflet-usage.png" alt="Leaflet">
+    </div>
+</section>
+
+<section class="slide slide_gray" id="leaflet-react">
+    <div class="layout-cover">
+        <img class="cover" src="pictures/leaflet-react.png" alt="Leaflet">
+    </div>
+</section>
+
+<section class="slide slide_gray" id="react-map">
+    <div class="layout-cover">
+        <img class="cover" src="pictures/react-map.png" alt="Leaflet">
+    </div>
+</section>
+
+<section class="slide slide_gray" id="react-layer-tile">
+    <div class="layout-cover">
+        <img class="cover" src="pictures/react-layer-tile.png" alt="Leaflet">
+    </div>
+</section>
+
+<section class="slide slide_gray" id="react-viewport">
+    <div class="layout-cover">
+        <img class="cover" src="pictures/react-viewport.png" alt="Leaflet">
+    </div>
+</section>
+
+<section class="slide slide_gray" id="react-layer-geojson">
+    <div class="layout-cover">
+        <img class="cover" src="pictures/react-layer-geojson.png" alt="Leaflet">
+    </div>
+</section>
+
+<section class="slide slide_gray" id="react-layer-marker">
+    <div class="layout-cover">
+        <img class="cover" src="pictures/react-layer-marker.png" alt="Leaflet">
+    </div>
+</section>
+
+<section class="slide slide_gray" id="react-map-usage">
+    <div class="layout-cover">
+        <img class="cover" src="pictures/react-map-usage.png" alt="Leaflet">
+    </div>
+</section>
+
+    <!--<section class="slide" id="see-more">
+        <h2 class="shout">
+            <img src="pictures/md-logo.png" alt="MD logo">
+            <a href="http://dev.mag-delivery-front.stands.userstory.ru/">See more...</a>
+        </h2>
+        <style>
+            #see-more h2 {
+                font-size: 100px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            #see-more img {
+                display: inline-block;
+                height: 1.2em;
+                vertical-align: middle;
+                width: 1.2em;
+            }
+        </style>
+    </section>-->
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.min.js"></script>
+    <!-- Copyright © 2018 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
