@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+
+        .f-z_xxl {
+            font-size: 90px;
+        }
+
+        .f-z_s {
+            font-size: 18px;
+        }
+
+        .f-z_xs {
+            font-size: 16px;
+        }
+
+        .h_full {
+            height: 100%;
+        }
+
+        .hor__item {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .hor__item_w {
+            width: 25%;
+        }
+
+        .box {
+            display: table;
+            height: 100%;
+            position: relative;
+            width: 100%;
+        }
+
+        .box_cover {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .row {
+            display: table-row;
+            position: relative;
+        }
+
+        .col {
+            display: table-cell;
+            position: relative;
+        }
+
+        .offset_20 {
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            top: 20px;
+        }
+
+        .offset_b_20 {
+            bottom: 20px;
+        }
+
+        .box_gray {
+            background-color: #e1e3e4;
+        }
+
+        .m_h_20 {
+            margin: 0 20px;
+        }
+
+        .m_v_20 {
+            margin: 20px 0;
+        }
+
+        .m_20 {
+            margin: 20px;
+        }
+
+        .p-t_20 {
+            padding-top: 20px;
+        }
+
+        .t-a_c {
+            text-align: center;
+        }
+
+        .w_full {
+            width: 100%;
+        }
+
+        .link_us {
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18.18px;
+            position: relative;
+        }
+
+        .link_us,
+        .link_us:after,
+        .link_us:before {
+            height: 18.18px;
+            transition: all 900ms ease, color 450ms ease 750ms, background-color 450ms ease 750ms, font-weight ease 450ms;
+            width: 98.98px;
+        }
+
+        .link_us:after,
+        .link_us:before {
+            overflow: hidden;
+            content: '';
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 98.98px;
+        }
+
+        .link_us:after {
+            color: transparent;
+            content: attr(data-title);
+            font-size: 16px;
+            line-height: 18.18px;
+            position: absolute;
+            text-align: center;
+            word-break: break-all;
+        }
+
+        .link_us:focus,
+        .link_us:hover {
+            color: transparent;
+            font-weight: 600;
+            transition: all 900ms ease 300ms, color 450ms ease, background-color 450ms ease, font-weight 0ms ease 300ms;
+        }
+
+        .link_us:focus:after,
+        .link_us:focus:before,
+        .link_us:hover:after,
+        .link_us:hover:before {
+            height: 98.98px;
+            pointer-events: all;
+            transition: all 900ms ease 300ms, color 450ms ease, background-color 450ms ease;
+        }
+
+        .link_us:focus:before,
+        .link_us:hover:before {
+            background-color: #000000;
+        }
+
+        .link_us:focus:after,
+        .link_us:hover:after {
+            color: #ffffff;
+            font-size: 20px;
+            left: 7px;
+            letter-spacing: 15px;
+            line-height: 29px;
+            box-sizing: border-box;
+            top: 14px;
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Адаптивная вёрстка</h1>
+        <p>Сухушин Александр</p>
+    </header>
+
+    <section class="slide" id="intro">
+        <h2>Адаптивная вёрстка</h2>
+        <p>
+            <em>Сухушин Александр</em>
+            <a class="link_us" data-title="USERSTORY" href="https://userstory.ru/" rel="noopener noreferrer" target="_blank">USERSTORY</a>
+        </p>
+        <style>
+            #intro {
+                background-image: url("pictures/intro-1.jpg");
+                background-position: 50% 50%;
+                background-size: cover;
+            }
+
+            #intro h2 {
+                margin-left: -40px;
+                margin-top: -38px;
+                color: white;
+                text-align: center;
+                text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+                font-size: 70px;
+            }
+
+            #intro p {
+                margin-left: -40px;
+                margin-top: 36px;
+                text-align: center;
+                color: #223138;
+                font-size: 20px;
+            }
+
+            #intro p a {
+                background-image: none;
+                color: #3d575f;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Что значит "адаптивный"?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <p class="next">
+                        <b>Адаптивный веб-дизайн</b> — дизайн веб-страниц,
+                        обеспечивающий правильное отображение сайта на различных устройствах,
+                        подключённых к интернету и динамически подстраивающийся под заданные размеры окна браузера.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Как проверять?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <ul>
+                        <li class="next">
+                            <a href="https://my.userstory.ru/" rel="noopener noreferrer" target="_blank">
+                                Chrome DevTools
+                            </a>
+                        </li>
+                        <li class="next">
+                            <a href="https://userstory.ru/" rel="noopener noreferrer" target="_blank">
+                                Remote devices
+                            </a>
+                        </li>
+                        <li class="next">
+                            <a href="http://www.vorlonjs.io/" rel="noopener noreferrer" target="_blank">
+                                Vorlon.JS
+                            </a>
+                        </li>
+                        <li class="next">
+                            <a href="https://www.browserstack.com/" rel="noopener noreferrer" target="_blank">
+                                BrowserStack
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Viewport</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <img class="cover" src="pictures/viewport.jpg" alt="Зачем это нужно?">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Viewport</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <pre class="f-z_s">
+                            <code>...</code>
+                            <code>    &lt;head&gt;</code>
+                            <code>        &lt;meta</code>
+                            <code>              name="<mark>viewport</mark>"</code>
+                            <code>              content="<mark>width=device-width</mark>,</code>
+                            <code>                       <mark>initial-scale=1.0</mark>,</code>
+                            <code>                       <mark>maximum-scale=1.0</mark>,</code>
+                            <code>                       <mark>minimum-scale=1.0</mark>" /&gt;</code>
+                            <code>        ...</code>
+                            <code>    &lt;/head&gt;</code>
+                            <code>...</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Единицы измерения</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <ul>
+                        <li>
+                            <b>%</b> - процент от размеров родителя
+                        </li>
+                        <li>
+                            <b>em</b> - коэффициент от размеров шрифта элемента
+                        </li>
+                        <li>
+                            <b>rem</b> - коэффициент от размеров шрифта html
+                        </li>
+                        <li>
+                            <b>vh</b> - процент от высоты экрана
+                        </li>
+                        <li>
+                            <b>vw</b> - процент от ширины экрана
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Волшебный checkbox</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Checkbox"
+                                src="//codepen.io/SuhushinAS/embed/PxrBJg/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/PxrBJg/">Checkbox</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Перенос слов</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Word wrap"
+                                src="//codepen.io/SuhushinAS/embed/LXZXbG/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/LXZXbG/">Word wrap</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Отзывчивые изображения</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Responsive images"
+                                src="//codepen.io/SuhushinAS/embed/qQMJKb/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/qQMJKb/">Responsive images</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Пропорции</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Aspect Ratio"
+                                src="//codepen.io/SuhushinAS/embed/EOyrjL/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/EOyrjL/">Aspect Ratio</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Контейнер</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Container"
+                                src="//codepen.io/SuhushinAS/embed/bQeQzQ/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/bQeQzQ/">Container</a>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Колонки</h2>
+                    <!--Добавить div-колонки-->
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Float"
+                                src="//codepen.io/SuhushinAS/embed/mQEvZr/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/mQEvZr/">Float</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Резиновый макет</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Rubber Layout"
+                                src="//codepen.io/SuhushinAS/embed/dQzNoz/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/dQzNoz/">Rubber Layout</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Flex</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Flex"
+                                src="//codepen.io/SuhushinAS/embed/MzvOag/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/MzvOag/">Flex</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Media-запросы</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Media query intro"
+                                src="//codepen.io/SuhushinAS/embed/KrvJbb/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/KrvJbb/">Media query intro</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Media-запросы</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Media check"
+                                src="//codepen.io/SuhushinAS/embed/rQzbzp/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/rQzbzp/">Media check</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Media-запросы</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Media mixin"
+                                src="//codepen.io/SuhushinAS/embed/VVRjge/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            See the Pen <a href="https://codepen.io/SuhushinAS/pen/VVRjge/">Media mixin</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Модульные сетки</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <img class="cover" src="pictures/grid-system.png" alt="Модульные сетки">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Модульные сетки</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <img class="cover" src="pictures/grid-system-desc.jpeg" alt="Модульные сетки">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Модульные сетки</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <img class="cover" src="pictures/grid-system-example.png" alt="Модульные сетки">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Bootstrap</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Bootstrap"
+                                src="//codepen.io/SuhushinAS/embed/vQMxGK/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/vQMxGK/">Bootstrap</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Сетки</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Grid system"
+                                src="//codepen.io/SuhushinAS/embed/ZmNvrm/?theme-id=dark&default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/ZmNvrm/">Grid system</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Ссылки</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <ul class="columns two">
+                            <li><a href="http://frontender.com.ua/mobile-web/wtf-viewport/">Viewport</a></li>
+                            <li><a href="http://shpargalkablog.ru/2013/02/word-wrap.html">Перенос слов CSS</a></li>
+                            <li><a href="https://youtu.be/gHLPBlzGRT8">Отзывчивые изображения</a></li>
+                            <li><a href="https://tuhub.ru/posts/flexbox-complete-guide/">Flex</a></li>
+                            <li><a href="https://habr.com/post/344910/">Модульная сетка</a></li>
+                            <li><a href="https://say-hi.me/design/chto-takoe-modulnaya-setka-i-dlya-chego-ona-nuzhna-v-veb-dizajne.html">Модульная сетка</a></li>
+                            <li><a href="https://totsamiyshigaev.livejournal.com/13606.html?page=2#comments">История сеточной системы</a></li>
+                            <li><a href="https://webdesign-master.ru/blog/tools/2016-11-26-bootstrap-psd.html">Bootstrap</a></li>
+                            <li><a href="http://css-live.ru/articles-css/pravilnye-kontrolnye-tochki-v-css.html">На 100% правильный способ делать контрольные точки в CSS</a></li>
+                            <li><a href="https://habr.com/post/273471/">Коллекция практических советов и заметок по вёрстке</a></li>
+                            <li><a href="https://codepen.io/SuhushinAS/pens/tags/?selected_tag=responsive">Примеры</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Задание</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <a href="https://adobe.ly/2PlXLbW">Макет</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.min.js"></script>
+    <!-- Copyright © 2018 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
