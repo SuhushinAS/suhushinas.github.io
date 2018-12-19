@@ -181,15 +181,55 @@
     </header>
 
     <section class="slide clear" id="intro">
-        <h2>Асинхронный JavaScript</h2>
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Асинхронный JavaScript</h2>
+                    <p>
+                        <em>Сухушин Александр</em>
+                        <a class="link_us" data-title="USERSTORY" href="https://userstory.ru/" rel="noopener noreferrer" target="_blank">USERSTORY</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover">
+                        <img class="cover" src="pictures/sync-async.gif" alt="structure">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            #intro {
+                padding: 0;
+            }
+
+            #intro h2 {
+                margin: 30px 0 0;
+                text-align: center;
+                font-size: 70px;
+            }
+
+            #intro p {
+                margin: 20px 0 0;
+                text-align: center;
+                font-size: 20px;
+            }
+        </style>
+        <!--<h2>Асинхронный JavaScript</h2>
         <p>
             <em>Сухушин Александр</em>
             <a class="link_us" data-title="USERSTORY" href="https://userstory.ru/" rel="noopener noreferrer" target="_blank">USERSTORY</a>
         </p>
         <style>
+            #intro {
+                background-image: url("pictures/sync-async.gif");
+                background-position: 50% 100%;
+                background-size: cover;
+            }
+
             #intro h2 {
                 margin: 30px 0 0;
-                /*color: white;*/
                 text-align: center;
                 font-size: 70px;
             }
@@ -197,22 +237,16 @@
             #intro p {
                 margin: 10px 0 0;
                 text-align: center;
-                /*color: white;*/
-                /*font-style: italic;*/
                 font-size: 20px;
             }
-
-            #intro p a {
-                /*color: white;*/
-            }
-        </style>
+        </style>-->
     </section>
 
     <section class="slide" id="sync">
         <div class="box">
             <div class="row">
                 <div class="col">
-                    <h2>Если бы JavaScript был синхронным</h2>
+                    <h2>Синхронный или асинхронный</h2>
                 </div>
             </div>
             <div class="row h_full">
@@ -221,11 +255,46 @@
                         <iframe class="h_full w_full"
                                 scrolling="no"
                                 title="Checkbox"
-                                src="//codepen.io/SuhushinAS/embed/PxrBJg/?theme-id=dark&default-tab=result"
+                                src="//codepen.io/SuhushinAS/embed/gZPJPz/?theme-id=dark&default-tab=result"
                                 frameborder="no"
                                 allowtransparency="true"
-                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/PxrBJg/">Checkbox</a>.
+                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/gZPJPz/">Sync async request</a>.
                         </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="how-spoiler">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Как это работает?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <div>Spoiler alert!!!</div>
+                        <div>В JavaScript один поток.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="how-structure">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Как это работает?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <img class="cover" src="pictures/structure_crop.png" alt="structure">
                     </div>
                 </div>
             </div>
@@ -267,13 +336,26 @@
                 <div class="col">
                     <div class="box_cover offset_b_20">
                         <ul class="columns two">
-                            <li><a href="http://frontender.com.ua/mobile-web/wtf-viewport/">Viewport</a></li>
+                            <li><a href="https://youtu.be/8cV4ZvHXQL4">Про цикл событий в JavaScript или "как на самом деле работает асинхронность"?</a></li>
+                            <li><a href="https://youtu.be/j4_9BZezSUA">Jake Archibald: все что я знаю про Event Loop в JavaScript (2018)</a></li>
+                            <li><a href="https://youtu.be/JrmDTZPsla4">Иван Тулуп. Асинхронщина в JS под капотом – Михаил Башуров</a></li>
                             <li><a href="https://codepen.io/SuhushinAS/pens/tags/?selected_tag=async">Примеры</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+        <style>
+            #links li {
+                font-size: 18px;
+                line-height: 1.25;
+                margin-top: 0.75em;
+            }
+            #links a {
+                /*background-image: none;*/
+                /*text-decoration: underline;*/
+            }
+        </style>
     </section>
 
     <div class="progress"></div>
