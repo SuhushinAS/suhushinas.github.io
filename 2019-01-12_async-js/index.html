@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+
+        .f-z_xxl {
+            font-size: 90px;
+        }
+
+        .f-z_xl {
+            font-size: 70px;
+        }
+
+        .f-z_l {
+            font-size: 50px;
+        }
+
+        .f-z_m {
+            font-size: 32px;
+        }
+
+        .f-z_s {
+            font-size: 18px;
+        }
+
+        .f-z_xs {
+            font-size: 16px;
+        }
+
+        .h_full {
+            height: 100%;
+        }
+
+        .hor__item {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .hor__item_w {
+            width: 25%;
+        }
+
+        .box {
+            display: table;
+            height: 100%;
+            position: relative;
+            width: 100%;
+        }
+
+        .box_cover {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .row {
+            display: table-row;
+            position: relative;
+        }
+
+        .col {
+            display: table-cell;
+            position: relative;
+        }
+
+        .offset_20 {
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            top: 20px;
+        }
+
+        .offset_b_20 {
+            bottom: 20px;
+        }
+
+        .box_gray {
+            background-color: #e1e3e4;
+        }
+
+        .m_h_20 {
+            margin: 0 20px;
+        }
+
+        .m_v_20 {
+            margin: 20px 0;
+        }
+
+        .m_20 {
+            margin: 20px;
+        }
+
+        .p-t_20 {
+            padding-top: 20px;
+        }
+
+        .t-a_c {
+            text-align: center;
+        }
+
+        .w_full {
+            width: 100%;
+        }
+
+        .link_us {
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18.18px;
+            position: relative;
+        }
+
+        .link_us,
+        .link_us:after,
+        .link_us:before {
+            height: 18.18px;
+            transition: all 900ms ease, color 450ms ease 750ms, background-color 450ms ease 750ms, font-weight ease 450ms;
+            width: 98.98px;
+        }
+
+        .link_us:after,
+        .link_us:before {
+            overflow: hidden;
+            content: '';
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 98.98px;
+        }
+
+        .link_us:after {
+            color: transparent;
+            content: attr(data-title);
+            font-size: 16px;
+            line-height: 18.18px;
+            position: absolute;
+            text-align: center;
+            word-break: break-all;
+        }
+
+        .link_us:focus,
+        .link_us:hover {
+            color: transparent;
+            font-weight: 600;
+            transition: all 900ms ease 300ms, color 450ms ease, background-color 450ms ease, font-weight 0ms ease 300ms;
+        }
+
+        .link_us:focus:after,
+        .link_us:focus:before,
+        .link_us:hover:after,
+        .link_us:hover:before {
+            height: 98.98px;
+            pointer-events: all;
+            transition: all 900ms ease 300ms, color 450ms ease, background-color 450ms ease;
+        }
+
+        .link_us:focus:before,
+        .link_us:hover:before {
+            background-color: #000000;
+        }
+
+        .link_us:focus:after,
+        .link_us:hover:after {
+            color: #ffffff;
+            font-size: 20px;
+            left: 7px;
+            letter-spacing: 15px;
+            line-height: 29px;
+            box-sizing: border-box;
+            top: 14px;
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Асинхронный JavaScript</h1>
+        <p>Сухушин Александр</p>
+    </header>
+
+    <section class="slide clear" id="intro">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Асинхронный JavaScript</h2>
+                    <p>
+                        <em>Сухушин Александр</em>
+                        <a class="link_us" data-title="USERSTORY" href="https://userstory.ru/" rel="noopener noreferrer" target="_blank">USERSTORY</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover">
+                        <img class="cover" src="pictures/sync-async.gif" alt="structure">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            #intro {
+                padding: 0;
+            }
+
+            #intro h2 {
+                margin: 30px 0 0;
+                text-align: center;
+                font-size: 70px;
+            }
+
+            #intro p {
+                margin: 20px 0 0;
+                text-align: center;
+                font-size: 20px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="sync">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Синхронный или асинхронный</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Checkbox"
+                                src="//codepen.io/SuhushinAS/embed/YdEBGN/?default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/YdEBGN/">Sync async request</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<section class="slide" id="how-spoiler">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Как это работает?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20 t-a_c">
+                        <img class="cover w" src="pictures/spoiler-alert.png" alt="spoiler">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <section class="slide" id="how-thread">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Как это работает?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20 t-a_c">
+                        <h1 class="f-z_xl"><mark>В JavaScript один поток.</mark></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="how-structure">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Как это работает?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <img class="cover" src="pictures/structure_crop.png" alt="structure">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="how-loupe">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Как это работает?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20 t-a_c">
+                        <div class="cover w"><a href="http://latentflip.com/loupe/">http://latentflip.com/loupe/</a></div>
+                        <!-- TODO Примеры кода-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="what-do-cb-example">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Как с этим жить (Callback)?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20 t-a_c">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Callback"
+                                src="//codepen.io/SuhushinAS/embed/rooYmM/?default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/rooYmM/">Callback</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="what-do-cb">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Как с этим жить (Callback)?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20 t-a_c">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Callback"
+                                src="//codepen.io/SuhushinAS/embed/OrpJyj/?default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/OrpJyj/">Callback</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="what-do-promise-example">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Как с этим жить (Promise)?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20 t-a_c">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Promise example"
+                                src="//codepen.io/SuhushinAS/embed/QzJaPr/?default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true"
+                                style="width: 100%;">See the Pen <a href="https://codepen.io/SuhushinAS/pen/QzJaPr/">Promise example</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="what-do-promise">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Как с этим жить (Promise)?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20 t-a_c">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Promise"
+                                src="//codepen.io/SuhushinAS/embed/REgPOX/?default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/REgPOX/">Promise</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="timer">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Таймер</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <iframe class="h_full w_full"
+                                scrolling="no"
+                                title="Timer"
+                                src="//codepen.io/SuhushinAS/embed/aPOYao/?default-tab=result"
+                                frameborder="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/aPOYao/">Timer</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="links">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Ссылки</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <ul class="columns two">
+                            <li><a href="https://youtu.be/8cV4ZvHXQL4">Про цикл событий в JavaScript или "как на самом деле работает асинхронность"?</a></li>
+                            <li><a href="https://youtu.be/j4_9BZezSUA">Jake Archibald: все что я знаю про Event Loop в JavaScript (2018)</a></li>
+                            <li><a href="https://youtu.be/JrmDTZPsla4">Иван Тулуп. Асинхронщина в JS под капотом</a></li>
+                            <li><a href="http://latentflip.com/loupe/">Loupe</a></li>
+                            <li><a href="https://codepen.io/SuhushinAS/pens/tags/?selected_tag=async">Примеры</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            #links li {
+                font-size: 18px;
+                line-height: 1.25;
+                margin-top: 0.75em;
+            }
+
+            #links a {
+                /*background-image: none;*/
+                /*text-decoration: underline;*/
+            }
+        </style>
+    </section>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.min.js"></script>
+    <!-- Copyright © 2018 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
