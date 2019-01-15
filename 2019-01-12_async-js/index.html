@@ -34,6 +34,10 @@
             font-size: 16px;
         }
 
+        .f-z_xxs {
+            font-size: 12px;
+        }
+
         .h_full {
             height: 100%;
         }
@@ -323,11 +327,34 @@
         </div>
     </section>
 
-    <section class="slide" id="what-do-cb-example">
+    <section class="slide" id="callback-example">
         <div class="box">
             <div class="row">
                 <div class="col">
-                    <h2>Как с этим жить (Callback)?</h2>
+                    <h2>Callback example</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <pre class="f-z_s">
+                            <code>function asyncFn(...params, callback) {</code>
+                            <code>  const <mark>result</mark> = { <span class="comment">// async code</span> };</code>
+                            <code>  callback(<mark>result</mark>);</code>
+                            <code>}</code>
+                            <code>function callback(<mark>result</mark>) { <span class="comment">// sync code</span> }</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="callback-simple">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Callback simple</h2>
                 </div>
             </div>
             <div class="row h_full">
@@ -335,11 +362,11 @@
                     <div class="box_cover offset_b_20 t-a_c">
                         <iframe class="h_full w_full"
                                 scrolling="no"
-                                title="Callback"
+                                title="Callback simple"
                                 src="//codepen.io/SuhushinAS/embed/rooYmM/?default-tab=result"
                                 frameborder="no"
                                 allowtransparency="true"
-                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/rooYmM/">Callback</a>.
+                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/rooYmM/">Callback simple</a>.
                         </iframe>
                     </div>
                 </div>
@@ -347,11 +374,11 @@
         </div>
     </section>
 
-    <section class="slide" id="what-do-cb">
+    <section class="slide" id="callback-advance">
         <div class="box">
             <div class="row">
                 <div class="col">
-                    <h2>Как с этим жить (Callback)?</h2>
+                    <h2>Callback advance</h2>
                 </div>
             </div>
             <div class="row h_full">
@@ -359,11 +386,11 @@
                     <div class="box_cover offset_b_20 t-a_c">
                         <iframe class="h_full w_full"
                                 scrolling="no"
-                                title="Callback"
+                                title="Callback advance"
                                 src="//codepen.io/SuhushinAS/embed/OrpJyj/?default-tab=result"
                                 frameborder="no"
                                 allowtransparency="true"
-                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/OrpJyj/">Callback</a>.
+                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/OrpJyj/">Callback advance</a>.
                         </iframe>
                     </div>
                 </div>
@@ -371,11 +398,64 @@
         </div>
     </section>
 
-    <section class="slide" id="what-do-promise-example">
+    <section class="slide" id="promise-example">
         <div class="box">
             <div class="row">
                 <div class="col">
-                    <h2>Как с этим жить (Promise)?</h2>
+                    <h2>Promise example</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <pre class="f-z_s">
+                            <code>function asyncFn(...params) {</code>
+                            <code>  return new Promise(function (resolve, reject) {</code>
+                            <code>    const {<mark class="important">error</mark>, <mark>result</mark>, status} = { <span class="comment">// async code</span> };</code>
+                            <code>    if ('success' === status) { resolve(<mark>result</mark>); }</code>
+                            <code>    if ('fail' === status) { reject(<mark class="important">error</mark>); }</code>
+                            <code>  });</code>
+                            <code>}</code>
+                            <code>asyncFn(...params)</code>
+                            <code>  .then(function(<mark>result</mark>) { <span class="comment">// sync code</span> })</code>
+                            <code>  .catch(function(<mark class="important">error</mark>) { <span class="comment">// sync code</span> });</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="promise-chaining">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Promise chaining</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <pre class="f-z_s">
+                            <code>function asyncFn() {</code>
+                            <code>  return Promise.resolve(<mark>2</mark>);</code>
+                            <code>}</code>
+                            <code>asyncFn()</code>
+                            <code>  .then(function (value) { return value + 2; }) <span class="comment">// <mark>4</mark></span></code>
+                            <code>  .then(function (value) { return 3 * value; }) <span class="comment">// <mark>12</mark></span></code>
+                            <code>  .then(function (value) { return value / 2; }); <span class="comment">// <mark>6</mark></span></code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="promise-simple">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Promise simple</h2>
                 </div>
             </div>
             <div class="row h_full">
@@ -383,12 +463,12 @@
                     <div class="box_cover offset_b_20 t-a_c">
                         <iframe class="h_full w_full"
                                 scrolling="no"
-                                title="Promise example"
+                                title="Promise simple"
                                 src="//codepen.io/SuhushinAS/embed/QzJaPr/?default-tab=result"
                                 frameborder="no"
                                 allowtransparency="true"
                                 allowfullscreen="true"
-                                style="width: 100%;">See the Pen <a href="https://codepen.io/SuhushinAS/pen/QzJaPr/">Promise example</a>.
+                                style="width: 100%;">See the Pen <a href="https://codepen.io/SuhushinAS/pen/QzJaPr/">Promise simple</a>.
                         </iframe>
                     </div>
                 </div>
@@ -396,11 +476,11 @@
         </div>
     </section>
 
-    <section class="slide" id="what-do-promise">
+    <section class="slide" id="promise-advance">
         <div class="box">
             <div class="row">
                 <div class="col">
-                    <h2>Как с этим жить (Promise)?</h2>
+                    <h2>Promise advance</h2>
                 </div>
             </div>
             <div class="row h_full">
@@ -408,11 +488,11 @@
                     <div class="box_cover offset_b_20 t-a_c">
                         <iframe class="h_full w_full"
                                 scrolling="no"
-                                title="Promise"
+                                title="Promise advance"
                                 src="//codepen.io/SuhushinAS/embed/REgPOX/?default-tab=result"
                                 frameborder="no"
                                 allowtransparency="true"
-                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/REgPOX/">Promise</a>.
+                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/REgPOX/">Promise advance</a>.
                         </iframe>
                     </div>
                 </div>
@@ -459,6 +539,7 @@
                             <li><a href="https://youtu.be/j4_9BZezSUA">Jake Archibald: все что я знаю про Event Loop в JavaScript (2018)</a></li>
                             <li><a href="https://youtu.be/JrmDTZPsla4">Иван Тулуп. Асинхронщина в JS под капотом</a></li>
                             <li><a href="http://latentflip.com/loupe/">Loupe</a></li>
+                            <li><a href="https://learn.javascript.ru/promise">Учебник по JavaScript (Promise)</a></li>
                             <li><a href="https://codepen.io/SuhushinAS/pens/tags/?selected_tag=async">Примеры</a></li>
                         </ul>
                     </div>
