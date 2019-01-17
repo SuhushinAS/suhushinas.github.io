@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Shower Presentation Engine</title>
+    <title>Асинхронный JavaScript</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
@@ -258,23 +258,6 @@
         </div>
     </section>
 
-    <!--<section class="slide" id="how-spoiler">
-        <div class="box">
-            <div class="row">
-                <div class="col">
-                    <h2>Как это работает?</h2>
-                </div>
-            </div>
-            <div class="row h_full">
-                <div class="col">
-                    <div class="box_cover offset_b_20 t-a_c">
-                        <img class="cover w" src="pictures/spoiler-alert.png" alt="spoiler">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-
     <section class="slide" id="how-thread">
         <div class="box">
             <div class="row">
@@ -524,30 +507,6 @@
         </div>
     </section>
 
-    <!--<section class="slide" id="timer">
-        <div class="box">
-            <div class="row">
-                <div class="col">
-                    <h2>Таймер</h2>
-                </div>
-            </div>
-            <div class="row h_full">
-                <div class="col">
-                    <div class="box_cover offset_b_20">
-                        <iframe class="h_full w_full"
-                                scrolling="no"
-                                title="Timer"
-                                src="//codepen.io/SuhushinAS/embed/aPOYao/?default-tab=result"
-                                frameborder="no"
-                                allowtransparency="true"
-                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/aPOYao/">Timer</a>.
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-
     <section class="slide" id="links">
         <div class="box">
             <div class="row">
@@ -558,30 +517,109 @@
             <div class="row h_full">
                 <div class="col">
                     <div class="box_cover offset_b_20">
-                        <ul class="columns two">
-                            <li><a href="https://youtu.be/8cV4ZvHXQL4">Про цикл событий в JavaScript или "как на самом деле работает асинхронность"?</a></li>
-                            <li><a href="https://youtu.be/j4_9BZezSUA">Jake Archibald: все что я знаю про Event Loop в JavaScript (2018)</a></li>
-                            <li><a href="https://youtu.be/JrmDTZPsla4">Иван Тулуп. Асинхронщина в JS под капотом</a></li>
-                            <li><a href="http://latentflip.com/loupe/">Loupe</a></li>
-                            <li><a href="https://learn.javascript.ru/promise">Учебник по JavaScript (Promise)</a></li>
-                            <li><a href="https://codepen.io/SuhushinAS/pens/tags/?selected_tag=async">Примеры</a></li>
+                        <ul>
+                            <li><a href="https://youtu.be/8cV4ZvHXQL4" target="_blank">Philip Roberts: Что за чертовщина такая event loop?</a></li>
+                            <li><a href="https://youtu.be/j4_9BZezSUA" target="_blank">Jake Archibald: все что я знаю про Event Loop в JavaScript (2018)</a></li>
+                            <li><a href="https://youtu.be/JrmDTZPsla4" target="_blank">Иван Тулуп. Асинхронщина в JS под капотом</a></li>
+                            <li><a href="http://latentflip.com/loupe/" target="_blank">Loupe</a></li>
+                            <li><a href="https://learn.javascript.ru/promise" target="_blank">Учебник по JavaScript (Promise)</a></li>
+                            <li><a href="https://codepen.io/SuhushinAS/pens/tags/?selected_tag=async" target="_blank">Примеры</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <style>
+        <!--<style>
             #links li {
                 font-size: 18px;
                 line-height: 1.25;
                 margin-top: 0.75em;
             }
+        </style>-->
+    </section>
 
-            #links a {
-                /*background-image: none;*/
-                /*text-decoration: underline;*/
-            }
-        </style>
+    <section class="slide" id="task-1">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Задание 1</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <p>Реализовать функцию timeout - аналог setTimeout, которая бы возвращала Promise.</p>
+                        <pre class="f-z_s">
+                            <code>function timeout(ms) {<mark> // code </mark>}</code>
+                            <code>timeout(3000).then(function() {</code>
+                            <code>  console.log('Прошло 3000 мс.');</code>
+                            <code>});</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="task-2">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Задание 2</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <p>Реализовать функцию sleep, которая бы задерживала выполнение асинхронной функции.</p>
+                        <pre class="f-z_s">
+                            <code>function sleep(ms) {<mark> // code </mark>}</code>
+                            <code>fetch('https://randomuser.me/api/?noinfo')</code>
+                            <code>  .then(sleep(3000))</code>
+                            <code>  .then((response) => {</code>
+                            <code>    console.log('Задержка - 3000 мс');</code>
+                            <code>  });</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="task-3">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Задание 3</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <p>Загрузить список пользователей (/api/v1/user) и список комментариев (/api/v1/comment).</p>
+                        <p>Вывести на странице всех пользователей с их комментариями.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="task-4">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Задание 4</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <p>Загрузить список пользователей (/api/v1/user).</p>
+                        <p>Вывести на странице всех пользователей с их комментариями.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div class="progress"></div>
