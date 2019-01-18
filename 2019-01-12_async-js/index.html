@@ -434,6 +434,29 @@
         </div>
     </section>
 
+    <section class="slide" id="promise-collapse">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Promise collapse</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <pre class="f-z_s">
+                            <code>Promise.resolve(1); <span class="comment">// Promise {&lt;resolved&gt;: 1}</span></code>
+                            <code>Promise.resolve(Promise.resolve(1)); <span class="comment">// Promise {&lt;resolved&gt;: 1}</span></code>
+                            <code>Promise.resolve(Promise.reject(1)); <span class="comment">// Promise {&lt;rejected&gt;: 1}</span></code>
+                            <code>Promise.reject(Promise.resolve(1)); <span class="comment">// Promise {&lt;rejected&gt;: 1}</span></code>
+                            <code>Promise.reject(Promise.reject(1)); <span class="comment">// Promise {&lt;rejected&gt;: Promise {&lt;rejected&gt;: 1}}</span></code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="slide" id="promise-simple">
         <div class="box">
             <div class="row">
@@ -483,6 +506,158 @@
         </div>
     </section>
 
+    <section class="slide" id="async-await-code-sync">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Async/await code async</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <pre>
+                            <code>(function() {</code>
+                            <code>  return 1;</code>
+                            <code>})() <span class="comment">// 1</span></code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="async-await-code-async">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Async/await code async</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <pre>
+                            <code>(<mark>async</mark> function() {</code>
+                            <code>  return 1;</code>
+                            <code>})() <span class="comment">// Promise {&lt;resolved&gt;: 1}</span></code>
+                        </pre>
+                        <pre>
+                            <code>(<mark>async</mark> function() {</code>
+                            <code>  throw 1;</code>
+                            <code>})() <span class="comment">// Promise {&lt;rejected&gt;: 1}</span></code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="async-await-code-promise">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Async/await code async</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <pre>
+                            <code>(function() {</code>
+                            <code>  return Promise.resolve(1);</code>
+                            <code>})() <span class="comment">// Promise {&lt;resolved&gt;: 1}</span></code>
+                        </pre>
+                        <pre>
+                            <code>(function() {</code>
+                            <code>  return Promise.reject(1);</code>
+                            <code>})() <span class="comment">// Promise {&lt;rejected&gt;: 1}</span></code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="async-await-code-async-promise">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Async/await code async</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <pre>
+                            <code>(<mark>async</mark> function() {</code>
+                            <code>  return Promise.resolve(1);</code>
+                            <code>})() <span class="comment">// Promise {&lt;resolved&gt;: 1}</span></code>
+                        </pre>
+                        <pre>
+                            <code>(<mark>async</mark> function() {</code>
+                            <code>  return Promise.reject(1);</code>
+                            <code>})() <span class="comment">// Promise {&lt;rejected&gt;: 1}</span></code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="async-await-code-await">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Async/await code await</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <pre>
+                            <code><span class="comment">// sync code</span></code>
+                            <code>const result = <mark>await</mark> asyncFn(...params);</code>
+                            <code><span class="comment">// sync code</span></code>
+                        </pre>
+                        <pre>
+                            <code><mark>async</mark> function() {</code>
+                            <code>  const result = <mark>await</mark> asyncFn(...params);</code>
+                            <code>  return result;</code>
+                            <code>} <span class="comment">// Promise {&lt;resolved&gt;: result}</span></code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="async-await-code-await-error">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Async/await code await</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <pre>
+                            <code>async function() {</code>
+                            <code>  try {</code>
+                            <code>    const result = <mark>await</mark> asyncFn(...params);</code>
+                            <code>    return result;</code>
+                            <code>  } catch(e) {</code>
+                            <code>    <span class="comment">// handle rerror</span></code>
+                            <code>  }</code>
+                            <code>}</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="slide" id="async-await">
         <div class="box">
             <div class="row">
@@ -517,12 +692,15 @@
             <div class="row h_full">
                 <div class="col">
                     <div class="box_cover offset_b_20">
-                        <ul>
+                        <ul class="f-z_s">
                             <li><a href="https://youtu.be/8cV4ZvHXQL4" target="_blank">Philip Roberts: Что за чертовщина такая event loop?</a></li>
                             <li><a href="https://youtu.be/j4_9BZezSUA" target="_blank">Jake Archibald: все что я знаю про Event Loop в JavaScript (2018)</a></li>
                             <li><a href="https://youtu.be/JrmDTZPsla4" target="_blank">Иван Тулуп. Асинхронщина в JS под капотом</a></li>
                             <li><a href="http://latentflip.com/loupe/" target="_blank">Loupe</a></li>
                             <li><a href="https://learn.javascript.ru/promise" target="_blank">Учебник по JavaScript (Promise)</a></li>
+                            <li><a href="https://youtu.be/vNEDPtVchfw" target="_blank">CodeDojo: Знакомство с обещаниями</a></li>
+                            <li><a href="https://youtu.be/SjNmkeUpQAU" target="_blank">CodeDojo: Создание обещаний</a></li>
+                            <li><a href="https://youtu.be/5kAPExqSZ1I" target="_blank">CodeDojo: Асинхронные функции</a></li>
                             <li><a href="https://codepen.io/SuhushinAS/pens/tags/?selected_tag=async" target="_blank">Примеры</a></li>
                         </ul>
                     </div>
