@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Асинхронный JavaScript</title>
+    <link href="node_modules/@shower/ribbon/styles/styles.css" rel="stylesheet">
+    <link href="/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="/favicon/favicon-194x194.png" rel="icon" sizes="194x194" type="image/png">
+    <link href="/favicon/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png">
+    <link href="/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="/favicon/site.webmanifest" rel="manifest">
+    <link color="#000000" href="/favicon/safari-pinned-tab.svg" rel="mask-icon">
+    <link href="/favicon/favicon.ico" rel="shortcut icon">
+    <meta content="#f7df1e" name="msapplication-TileColor">
+    <meta content="/favicon/mstile-144x144.png" name="msapplication-TileImage">
+    <meta content="/favicon/browserconfig.xml" name="msapplication-config">
+    <meta content="#ffffff" name="theme-color">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <style>
         .shower {
             --slide-ratio: calc(16 / 9);
@@ -23,7 +34,7 @@
         }
 
         .f-z_m {
-            font-size: 32px;
+            font-size: 24px;
         }
 
         .f-z_s {
@@ -111,6 +122,10 @@
             text-align: center;
         }
 
+        .v-a_m {
+            vertical-align: middle;
+        }
+
         .w_full {
             width: 100%;
         }
@@ -188,6 +203,7 @@
             top: 14px;
         }
     </style>
+    <title>Асинхронный JavaScript</title>
 </head>
 <body class="shower list">
 
@@ -210,7 +226,7 @@
             <div class="row h_full">
                 <div class="col">
                     <div class="box_cover">
-                        <img class="cover" src="pictures/sync-async.gif" alt="structure">
+                        <img alt="structure" class="cover" src="pictures/sync-async.gif">
                     </div>
                 </div>
             </div>
@@ -234,6 +250,32 @@
         </style>
     </section>
 
+    <section class="slide" id="description">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Что такое асинхронный?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover f-z_m offset_b_20">
+                        <blockquote>
+                            <p><strong>Асинхронность</strong> &mdash; не совпадение с чем-либо во времени; неодномоментность, неодновременность, несинхронность
+                                &mdash; характеризует процессы, не совпадающие во времени.</p>
+                        </blockquote>
+                        <blockquote>
+                            <p>В компьютерном программировании, асинхронные событиями являются те,
+                                которые возникают независимо от основного потока выполнения программы.
+                                Асинхронные действия — действия, выполненные в неблокирующем режиме,
+                                что позволяет основному потоку программы продолжить обработку.</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="slide" id="sync">
         <div class="box">
             <div class="row">
@@ -244,13 +286,13 @@
             <div class="row h_full">
                 <div class="col">
                     <div class="box_cover offset_b_20">
-                        <iframe class="h_full w_full"
-                                scrolling="no"
-                                title="Checkbox"
-                                src="//codepen.io/SuhushinAS/embed/YdEBGN/?default-tab=result"
-                                frameborder="no"
+                        <iframe allowfullscreen="true"
                                 allowtransparency="true"
-                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/YdEBGN/">Sync async request</a>.
+                                class="h_full w_full"
+                                frameborder="no"
+                                scrolling="no"
+                                src="//codepen.io/SuhushinAS/embed/YdEBGN/?default-tab=result"
+                                title="Checkbox">See the Pen <a href="https://codepen.io/SuhushinAS/pen/YdEBGN/">Sync async request</a>.
                         </iframe>
                     </div>
                 </div>
@@ -285,14 +327,14 @@
             <div class="row h_full">
                 <div class="col">
                     <div class="box_cover offset_b_20">
-                        <img class="cover" src="pictures/structure_crop.png" alt="structure">
+                        <img alt="structure" class="cover" src="pictures/structure_crop.png">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="slide" id="how-loupe">
+    <section class="slide" id="how-loupe-simple">
         <div class="box">
             <div class="row">
                 <div class="col">
@@ -301,9 +343,92 @@
             </div>
             <div class="row h_full">
                 <div class="col">
-                    <div class="box_cover offset_b_20 t-a_c">
-                        <div class="cover w"><a href="http://latentflip.com/loupe/">http://latentflip.com/loupe/</a></div>
-                        <!-- TODO Примеры кода-->
+                    <div class="box_cover offset_b_20">
+                        <p><a href="http://latentflip.com/loupe/" target="_blank">http://latentflip.com/loupe/</a></p>
+                        <pre class="f-z_s" style="column-count: 2;">
+                            <code>first();</code>
+                            <code>function first() {</code>
+                            <code>  console.log('first');</code>
+                            <code>  second();</code>
+                            <code>}</code>
+                            <code>function second() {</code>
+                            <code>  console.log('second');</code>
+                            <code>  third();</code>
+                            <code>}</code>
+                            <code>function third() {</code>
+                            <code>  console.log('third');</code>
+                            <code>}</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="how-loupe-advance">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Как это работает?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <pre class="f-z_s" style="column-count: 2;">
+                            <code>first();</code>
+                            <code>function first() {</code>
+                            <code>  console.log('first');</code>
+                            <code>  setTimeout(second, 20000);</code>
+                            <code>  third();</code>
+                            <code>}</code>
+                            <code>function second() {</code>
+                            <code>  console.log('second');</code>
+                            <code>}</code>
+                            <code>function third() {</code>
+                            <code>  console.log('third');</code>
+                            <code>  console.log('third');</code>
+                            <code>  console.log('third');</code>
+                            <code>  console.log('third');</code>
+                            <code>  console.log('third');</code>
+                            <code>  console.log('third');</code>
+                            <code>  console.log('third');</code>
+                            <code>  console.log('third');</code>
+                            <code>  console.log('third');</code>
+                            <code>  console.log('third');</code>
+                            <code>}</code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="how-loupe-expert">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Как это работает?</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <pre class="f-z_s" style="column-count: 2;">
+                            <code>$.on('button', 'click', onClick);</code>
+                            <code>function onClick() {</code>
+                            <code>  console.log('onClick'); </code>
+                            <code>  setTimeout(timer, 15000);</code>
+                            <code>}</code>
+                            <code>function timer() {</code>
+                            <code>  console.log('timer');</code>
+                            <code>}</code>
+                            <code>console.log("One");</code>
+                            <code>console.log("Two");</code>
+                            <code>console.log("Three");</code>
+                            <code>setTimeout(timer, 20000);</code>
+                            <code>console.log("Six");</code>
+                        </pre>
                     </div>
                 </div>
             </div>
@@ -343,13 +468,13 @@
             <div class="row h_full">
                 <div class="col">
                     <div class="box_cover offset_b_20 t-a_c">
-                        <iframe class="h_full w_full"
-                                scrolling="no"
-                                title="Callback simple"
-                                src="//codepen.io/SuhushinAS/embed/rooYmM/?default-tab=result"
-                                frameborder="no"
+                        <iframe allowfullscreen="true"
                                 allowtransparency="true"
-                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/rooYmM/">Callback simple</a>.
+                                class="h_full w_full"
+                                frameborder="no"
+                                scrolling="no"
+                                src="//codepen.io/SuhushinAS/embed/rooYmM/?default-tab=result"
+                                title="Callback simple">See the Pen <a href="https://codepen.io/SuhushinAS/pen/rooYmM/">Callback simple</a>.
                         </iframe>
                     </div>
                 </div>
@@ -367,14 +492,35 @@
             <div class="row h_full">
                 <div class="col">
                     <div class="box_cover offset_b_20 t-a_c">
-                        <iframe class="h_full w_full"
-                                scrolling="no"
-                                title="Callback advance"
-                                src="//codepen.io/SuhushinAS/embed/OrpJyj/?default-tab=result"
-                                frameborder="no"
+                        <iframe allowfullscreen="true"
                                 allowtransparency="true"
-                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/OrpJyj/">Callback advance</a>.
+                                class="h_full w_full"
+                                frameborder="no"
+                                scrolling="no"
+                                src="//codepen.io/SuhushinAS/embed/OrpJyj/?default-tab=result"
+                                title="Callback advance">See the Pen <a href="https://codepen.io/SuhushinAS/pen/OrpJyj/">Callback advance</a>.
                         </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="promise-description">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Promise example</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover offset_b_20">
+                        <blockquote>
+                            <p><strong>Promise</strong> &mdash; это специальный объект, который содержит своё состояние.
+                                Вначале pending («ожидание»), затем – одно из:
+                                <mark>resolved</mark> («выполнено успешно») или <mark>rejected</mark> («выполнено с ошибкой»).</p>
+                        </blockquote>
                     </div>
                 </div>
             </div>
@@ -424,9 +570,9 @@
                             <code>  return Promise.resolve(<mark>2</mark>);</code>
                             <code>}</code>
                             <code>asyncFn()</code>
-                            <code>  .then(function (value) { return value + 2; }) <span class="comment">// <mark>4</mark></span></code>
-                            <code>  .then(function (value) { return 3 * value; }) <span class="comment">// <mark>12</mark></span></code>
-                            <code>  .then(function (value) { return value / 2; }); <span class="comment">// <mark>6</mark></span></code>
+                            <code>  .then(function (value) { return value + 2; }) <span class="comment">// Promise {&lt;resolved&gt;: <mark>4</mark>}</span></code>
+                            <code>  .then(function (value) { return 3 * value; }) <span class="comment">// Promise {&lt;resolved&gt;: <mark>12</mark>}</span></code>
+                            <code>  .then(function (value) { return value / 2; }); <span class="comment">// Promise {&lt;resolved&gt;: <mark>6</mark>}</span></code>
                         </pre>
                     </div>
                 </div>
@@ -467,14 +613,14 @@
             <div class="row h_full">
                 <div class="col">
                     <div class="box_cover offset_b_20 t-a_c">
-                        <iframe class="h_full w_full"
-                                scrolling="no"
-                                title="Promise simple"
-                                src="//codepen.io/SuhushinAS/embed/QzJaPr/?default-tab=result"
-                                frameborder="no"
+                        <iframe allowfullscreen="true"
                                 allowtransparency="true"
-                                allowfullscreen="true"
-                                style="width: 100%;">See the Pen <a href="https://codepen.io/SuhushinAS/pen/QzJaPr/">Promise simple</a>.
+                                class="h_full w_full"
+                                frameborder="no"
+                                scrolling="no"
+                                src="//codepen.io/SuhushinAS/embed/QzJaPr/?default-tab=result"
+                                style="width: 100%;"
+                                title="Promise simple">See the Pen <a href="https://codepen.io/SuhushinAS/pen/QzJaPr/">Promise simple</a>.
                         </iframe>
                     </div>
                 </div>
@@ -492,13 +638,13 @@
             <div class="row h_full">
                 <div class="col">
                     <div class="box_cover offset_b_20 t-a_c">
-                        <iframe class="h_full w_full"
-                                scrolling="no"
-                                title="Promise advance"
-                                src="//codepen.io/SuhushinAS/embed/REgPOX/?default-tab=result"
-                                frameborder="no"
+                        <iframe allowfullscreen="true"
                                 allowtransparency="true"
-                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/REgPOX/">Promise advance</a>.
+                                class="h_full w_full"
+                                frameborder="no"
+                                scrolling="no"
+                                src="//codepen.io/SuhushinAS/embed/REgPOX/?default-tab=result"
+                                title="Promise advance">See the Pen <a href="https://codepen.io/SuhushinAS/pen/REgPOX/">Promise advance</a>.
                         </iframe>
                     </div>
                 </div>
@@ -668,13 +814,13 @@
             <div class="row h_full">
                 <div class="col">
                     <div class="box_cover offset_b_20 t-a_c">
-                        <iframe class="h_full w_full"
-                                scrolling="no"
-                                title="Promise advance"
-                                src="//codepen.io/SuhushinAS/embed/REdJWb/?default-tab=result"
-                                frameborder="no"
+                        <iframe allowfullscreen="true"
                                 allowtransparency="true"
-                                allowfullscreen="true">See the Pen <a href="https://codepen.io/SuhushinAS/pen/REdJWb/">Async/await</a>.
+                                class="h_full w_full"
+                                frameborder="no"
+                                scrolling="no"
+                                src="//codepen.io/SuhushinAS/embed/REdJWb/?default-tab=result"
+                                title="Promise advance">See the Pen <a href="https://codepen.io/SuhushinAS/pen/REdJWb/">Async/await</a>.
                         </iframe>
                     </div>
                 </div>
@@ -728,7 +874,7 @@
                     <div class="box_cover offset_b_20">
                         <p>Реализовать функцию timeout - аналог setTimeout, которая бы возвращала Promise.</p>
                         <pre class="f-z_s">
-                            <code>function timeout(ms) {<mark> // code </mark>}</code>
+                            <code>function timeout(ms) { <mark>// code</mark> }</code>
                             <code>timeout(3000).then(function() {</code>
                             <code>  console.log('Прошло 3000 мс.');</code>
                             <code>});</code>
@@ -751,7 +897,7 @@
                     <div class="box_cover offset_b_20">
                         <p>Реализовать функцию sleep, которая бы задерживала выполнение асинхронной функции.</p>
                         <pre class="f-z_s">
-                            <code>function sleep(ms) {<mark> // code </mark>}</code>
+                            <code>function sleep(ms) { <mark>// code</mark> }</code>
                             <code>fetch('https://randomuser.me/api/?noinfo')</code>
                             <code>  .then(sleep(3000))</code>
                             <code>  .then((response) => {</code>
@@ -774,6 +920,7 @@
             <div class="row h_full">
                 <div class="col">
                     <div class="box_cover offset_b_20">
+                        <p><a href="https://gitlab.userstory.ru/userstory-temp/frontend-test-lesson-4">https://gitlab.userstory.ru/userstory-temp/frontend-test-lesson-4</a></p>
                         <p>Загрузить список пользователей (/api/v1/user) и список комментариев (/api/v1/comment).</p>
                         <p>Вывести на странице всех пользователей с их комментариями.</p>
                     </div>
@@ -792,8 +939,10 @@
             <div class="row h_full">
                 <div class="col">
                     <div class="box_cover offset_b_20">
+                        <p><a href="https://gitlab.userstory.ru/userstory-temp/frontend-test-lesson-4">https://gitlab.userstory.ru/userstory-temp/frontend-test-lesson-4</a></p>
                         <p>Загрузить список пользователей (/api/v1/user).</p>
-                        <p>Вывести на странице всех пользователей с их комментариями.</p>
+                        <p>Загрузить список комментариев (/api/v1/comment) только для активных пользователей.</p>
+                        <p>Вывести на странице активных пользователей с их комментариями.</p>
                     </div>
                 </div>
             </div>
