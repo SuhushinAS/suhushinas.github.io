@@ -346,17 +346,17 @@
                     <div class="box_cover offset_b_20">
                         <p><a href="http://latentflip.com/loupe/" target="_blank">http://latentflip.com/loupe/</a></p>
                         <pre class="f-z_s" style="column-count: 2;">
-                            <code>first();</code>
-                            <code>function first() {</code>
-                            <code>  console.log('first');</code>
-                            <code>  second();</code>
+                            <code>one();</code>
+                            <code>function one() {</code>
+                            <code>  console.log('One');</code>
+                            <code>  two();</code>
                             <code>}</code>
-                            <code>function second() {</code>
-                            <code>  console.log('second');</code>
-                            <code>  third();</code>
+                            <code>function two() {</code>
+                            <code>  console.log('Two');</code>
+                            <code>  three();</code>
                             <code>}</code>
-                            <code>function third() {</code>
-                            <code>  console.log('third');</code>
+                            <code>function three() {</code>
+                            <code>  console.log('Three');</code>
                             <code>}</code>
                         </pre>
                     </div>
@@ -376,26 +376,26 @@
                 <div class="col">
                     <div class="box_cover offset_b_20">
                         <pre class="f-z_s" style="column-count: 2;">
-                            <code>first();</code>
-                            <code>function first() {</code>
-                            <code>  console.log('first');</code>
-                            <code>  setTimeout(second, 20000);</code>
-                            <code>  third();</code>
+                            <code>one();</code>
+                            <code>function one() {</code>
+                            <code>  console.log('One');</code>
+                            <code>  setTimeout(two, 20000);</code>
+                            <code>  three();</code>
                             <code>}</code>
-                            <code>function second() {</code>
-                            <code>  console.log('second');</code>
+                            <code>function two() {</code>
+                            <code>  console.log('Two');</code>
                             <code>}</code>
-                            <code>function third() {</code>
-                            <code>  console.log('third');</code>
-                            <code>  console.log('third');</code>
-                            <code>  console.log('third');</code>
-                            <code>  console.log('third');</code>
-                            <code>  console.log('third');</code>
-                            <code>  console.log('third');</code>
-                            <code>  console.log('third');</code>
-                            <code>  console.log('third');</code>
-                            <code>  console.log('third');</code>
-                            <code>  console.log('third');</code>
+                            <code>function three() {</code>
+                            <code>  console.log('Three');</code>
+                            <code>  console.log('Three');</code>
+                            <code>  console.log('Three');</code>
+                            <code>  console.log('Three');</code>
+                            <code>  console.log('Three');</code>
+                            <code>  console.log('Three');</code>
+                            <code>  console.log('Three');</code>
+                            <code>  console.log('Three');</code>
+                            <code>  console.log('Three');</code>
+                            <code>  console.log('Three');</code>
                             <code>}</code>
                         </pre>
                     </div>
@@ -427,7 +427,8 @@
                             <code>console.log("Two");</code>
                             <code>console.log("Three");</code>
                             <code>setTimeout(timer, 20000);</code>
-                            <code>console.log("Six");</code>
+                            <code>console.log("Four");</code>
+                            <code>console.log("Five");</code>
                         </pre>
                     </div>
                 </div>
@@ -793,8 +794,8 @@
                             <code>  try {</code>
                             <code>    const result = <mark>await</mark> asyncFn(...params);</code>
                             <code>    return result;</code>
-                            <code>  } catch(e) {</code>
-                            <code>    <span class="comment">// handle rerror</span></code>
+                            <code>  } catch(error) {</code>
+                            <code>    <span class="comment">// handle error</span></code>
                             <code>  }</code>
                             <code>}</code>
                         </pre>
