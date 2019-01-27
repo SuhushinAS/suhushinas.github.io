@@ -1,1 +1,6 @@
+description: SuhushinAS page
+#google_analytics: [Your Google Analytics tracking ID]
+#logo: [Location of the logo]
+#show_downloads: ["true" or "false" to indicate whether to provide a download URL]
 theme: jekyll-theme-minimal
+title: SuhushinAS
