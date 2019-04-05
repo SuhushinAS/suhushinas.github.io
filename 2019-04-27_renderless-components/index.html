@@ -4,7 +4,7 @@
     <title>Renderless Components в React. Как интегрировать неинтегрируемое?</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="shower/themes/ribbon/styles/styles.css" rel="stylesheet">
+    <link href="node_modules/@shower/ribbon/styles/styles.css" rel="stylesheet">
     <style>
         html {
             height: 100%;
@@ -168,11 +168,11 @@
         .link_us {
             --us-speed: 200ms;
             display: inline-block;
-            font-family: "Trebuchet MS";
+            font-family: "Trebuchet MS", sans-serif;
             font-size: 24px;
             font-weight: 400;
             line-height: 28px;
-            outline: none   ;
+            outline: none;
             position: relative;
         }
 
@@ -251,13 +251,31 @@
             box-sizing: border-box;
             top: 16px;
         }
+        .slide.image .box_cover {
+            overflow: auto;
+        }
+        .slide.image img {
+            max-width: 100%;
+        }
+        .slide.iframe .box_cover {
+            overflow: hidden;
+        }
+        .slide.iframe iframe {
+            border: 0;
+            height: 100%;
+            overflow: auto;
+            width: 100%;
+        }
+        .slide.iframe img {
+            max-width: 100%;
+        }
     </style>
 </head>
 <body class="shower list">
 
     <header class="caption">
-        <!--<h1>Renderless Components в React.<br /> Как интегрировать неинтегрируемое?</h1>
-        <p>Сухушин Александр</p>-->
+        <h1>Renderless Components в React.<br /> Как интегрировать неинтегрируемое?</h1>
+        <p>Сухушин Александр</p>
     </header>
 
     <section class="slide clear" id="intro">
@@ -447,6 +465,42 @@
         </style>
     </section>
 
+    <section class="slide" id="about">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Обо мне</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="about">
+                        <div class="about__me">
+                            Сухушин Александр
+                        </div>
+                        <div class="about__company">
+                            <a class="link_us" data-title="USERSTORY" href="https://userstory.ru/">USERSTORY</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .about {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: center;
+            }
+            .about__me {
+            }
+            .about__company {
+                padding: 60px;
+            }
+        </style>
+    </section>
+
     <section class="slide" id="stack">
         <div class="box">
             <div class="row">
@@ -505,24 +559,7 @@
         </style>
     </section>
 
-    <section class="slide" id="problem">
-        <div class="box">
-            <div class="row">
-                <div class="col">
-                    <h2>Проблема</h2>
-                </div>
-            </div>
-            <div class="row h_full">
-                <div class="col">
-                    <div class="box_cover">
-                        Не работают с React
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="slide" id="react−leaflet">
+    <section class="slide iframe" id="react−leaflet">
         <div class="box">
             <div class="row">
                 <div class="col">
@@ -539,23 +576,9 @@
                 </div>
             </div>
         </div>
-        <style>
-            #react−leaflet .box_cover {
-                overflow: hidden;
-            }
-            #react−leaflet iframe {
-                border: 0;
-                height: 100%;
-                overflow: auto;
-                width: 100%;
-            }
-            #react−leaflet img {
-                max-width: 100%;
-            }
-        </style>
     </section>
 
-    <section class="slide" id="leaflet">
+    <section class="slide iframe" id="leaflet">
         <div class="box">
             <div class="row">
                 <div class="col">
@@ -572,48 +595,26 @@
                 </div>
             </div>
         </div>
-        <style>
-            #leaflet .box_cover {
-                overflow: hidden;
-            }
-            #leaflet iframe {
-                border: 0;
-                height: 100%;
-                overflow: auto;
-                width: 100%;
-            }
-            #leaflet img {
-                max-width: 100%;
-            }
-        </style>
     </section>
 
-    <section class="slide" id="reactleaflet">
+    <section class="slide image" id="map">
         <div class="box">
             <div class="row">
                 <div class="col">
-                    <h2>React+Leaflet</h2>
+                    <h2>Map</h2>
                 </div>
             </div>
             <div class="row h_full">
                 <div class="col">
                     <div class="box_cover">
-                        <img src="pictures/reactleaflet.png" alt="reactleaflet">
+                        <img src="pictures/map.png" alt="Map">
                     </div>
                 </div>
             </div>
         </div>
-        <style>
-            #reactleaflet .box_cover {
-                overflow: auto;
-            }
-            #reactleaflet img {
-                max-width: 100%;
-            }
-        </style>
     </section>
 
-    <section class="slide" id="tile-layer">
+    <section class="slide image" id="tile-layer">
         <div class="box">
             <div class="row">
                 <div class="col">
@@ -628,17 +629,26 @@
                 </div>
             </div>
         </div>
-        <style>
-            #tile-layer .box_cover {
-                overflow: auto;
-            }
-            #tile-layer img {
-                max-width: 100%;
-            }
-        </style>
     </section>
 
-    <section class="slide" id="map-view">
+    <section class="slide image" id="geo-json">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>GeoJSON</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover">
+                        <img src="pictures/geo-json.png" alt="GeoJSON">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide image" id="map-view">
         <div class="box">
             <div class="row">
                 <div class="col">
@@ -653,42 +663,45 @@
                 </div>
             </div>
         </div>
-        <style>
-            #map-view .box_cover {
-                overflow: auto;
-            }
-            #map-view img {
-                max-width: 100%;
-            }
-        </style>
     </section>
 
-    <section class="slide" id="example-map">
+    <section class="slide image" id="map-usage">
         <div class="box">
             <div class="row">
                 <div class="col">
-                    <h2>Example Map</h2>
+                    <h2>Map Usage</h2>
                 </div>
             </div>
             <div class="row h_full">
                 <div class="col">
                     <div class="box_cover">
-                        <img src="pictures/example-map.png" alt="Example Map">
+                        <img src="pictures/map-usage.png" alt="Map Usage">
                     </div>
                 </div>
             </div>
         </div>
-        <style>
-            #example-map .box_cover {
-                overflow: auto;
-            }
-            #example-map img {
-                max-width: 100%;
-            }
-        </style>
     </section>
 
-    <section class="slide" id="key-handler">
+    <section class="slide" id="map-example">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Map Example</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover t-a_c">
+                        <a href="https://suhushinas.github.io/2019-04-27_renderless-components-example/#/example-map" target="_blank">
+                            <img src="pictures/map-example.png" alt="Map Example">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide image" id="key-handler">
         <div class="box">
             <div class="row">
                 <div class="col">
@@ -703,17 +716,9 @@
                 </div>
             </div>
         </div>
-        <style>
-            #key-handler .box_cover {
-                overflow: auto;
-            }
-            #key-handler img {
-                max-width: 100%;
-            }
-        </style>
     </section>
 
-    <section class="slide" id="key-handler-usage">
+    <section class="slide image" id="key-handler-usage">
         <div class="box">
             <div class="row">
                 <div class="col">
@@ -728,17 +733,28 @@
                 </div>
             </div>
         </div>
-        <style>
-            #key-handler-usage .box_cover {
-                overflow: auto;
-            }
-            #key-handler-usage img {
-                max-width: 100%;
-            }
-        </style>
     </section>
 
-    <section class="slide" id="socket-centrifuge">
+    <section class="slide" id="key-handler-example">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Key Handler Example</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover t-a_c">
+                        <a href="https://suhushinas.github.io/2019-04-27_renderless-components-example/#/example-key" target="_blank">
+                            <img src="pictures/key-handler-example.png" alt="Map Example">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide image" id="socket-centrifuge">
         <div class="box">
             <div class="row">
                 <div class="col">
@@ -753,17 +769,9 @@
                 </div>
             </div>
         </div>
-        <style>
-            #socket-centrifuge .box_cover {
-                overflow: auto;
-            }
-            #socket-centrifuge img {
-                max-width: 100%;
-            }
-        </style>
     </section>
 
-    <section class="slide" id="socket-subscribe">
+    <section class="slide image" id="socket-subscribe">
         <div class="box">
             <div class="row">
                 <div class="col">
@@ -778,17 +786,9 @@
                 </div>
             </div>
         </div>
-        <style>
-            #socket-subscribe .box_cover {
-                overflow: auto;
-            }
-            #socket-subscribe img {
-                max-width: 100%;
-            }
-        </style>
     </section>
 
-    <section class="slide" id="socket-usage">
+    <section class="slide image" id="socket-usage">
         <div class="box">
             <div class="row">
                 <div class="col">
@@ -803,163 +803,48 @@
                 </div>
             </div>
         </div>
-        <style>
-            #socket-usage .box_cover {
-                overflow: auto;
-            }
-            #socket-usage img {
-                max-width: 100%;
-            }
-        </style>
     </section>
 
-    <!--<section class="slide">
-        <h2>Shower key features</h2>
-        <ol>
-            <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
-        </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-    </section>
-
-    <section class="slide">
-        <h2>Plain text on your slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-
-    <section class="slide">
-        <h2>Two columns if you like</h2>
-        <div class="columns two">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+    <section class="slide" id="socket-example">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>WebSockets Example</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover t-a_c">
+                        <a href="https://suhushinas.github.io/2019-04-27_renderless-components-example/#/example-socket" target="_blank">
+                            <img src="pictures/socket-example.png" alt="Map Example">
+                        </a>
+                        <p>
+                            <a href="https://suhushinas.github.io/2019-04-27_renderless-components-example/#/socket-generator" target="_blank">socket-generator</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="slide">
-        <h2>All kind of lists</h2>
-        <ol>
-            <li>Simple lists are marked with bullets</li>
-            <li>Ordered lists begin with a number</li>
-            <li>You can even nest lists one inside another
-                <ul>
-                    <li>Or mix their types</li>
-                    <li>But do not go too far</li>
-                    <li>Otherwise audience will be bored</li>
-                </ul>
-            </li>
-            <li>Look, seven rows exactly!</li>
-        </ol>
+    <section class="slide" id="questions">
+        <div class="box">
+            <div class="row">
+                <div class="col">
+                    <h2>Вопросы</h2>
+                </div>
+            </div>
+            <div class="row h_full">
+                <div class="col">
+                    <div class="box_cover t-a_c">
+                        <a href="https://suhushinas.github.io/2019-04-27_renderless-components/" target="_blank">
+                            <img src="pictures/self-link.png" alt="Map Example">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-
-    <section class="slide">
-        <h2>Serious citations</h2>
-        <figure>
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-            </blockquote>
-            <figcaption>Marcus Tullius Cicero</figcaption>
-        </figure>
-    </section>
-
-    <section class="slide">
-        <h2>Code samples</h2>
-        <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code class="mark">&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!&#45;&#45;Comment&#45;&#45;&gt;</span></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>Even tables</h2>
-        <table>
-        <tr>
-            <th scope="col">Locavore</th>
-            <th>Umami</th>
-            <th>Helvetica</th>
-            <th>Vegan</th>
-        </tr>
-        <tr>
-            <th scope="row">Fingerstache</th>
-            <td>Kale</td>
-            <td>Chips</td>
-            <td>Keytar</td>
-        </tr>
-        <tr>
-            <th scope="row">Sriracha</th>
-            <td>Gluten-free</td>
-            <td>Ennui</td>
-            <td>Keffiyeh</td>
-        </tr>
-        <tr>
-            <th scope="row">Thundercats</th>
-            <td>Jean</td>
-            <td>Shorts</td>
-            <td>Biodiesel</td>
-        </tr>
-        <tr>
-            <th scope="row">Terry</th>
-            <td>Richardson</td>
-            <td>Swag</td>
-            <td>Blog</td>
-        </tr>
-        </table>
-        <p>It’s good to have information organized.</p>
-    </section>
-
-    <section class="slide" id="picture">
-        <h2>Pictures</h2>
-        <figure>
-            <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-            <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
-            </figcaption>
-        </figure>
-        <style>
-            #picture h2 {
-                color: white;
-            }
-        </style>
-    </section>
-
-    <section class="slide">
-        <h2 class="shout shrink">You can even shout this way</h2>
-    </section>
-
-    <section class="slide">
-        <h2>Inner navigation</h2>
-        <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
-    </section>
-
-    <section class="slide" id="see-more">
-        <h2 class="shout">
-            <img src="pictures/logo.svg" alt="Shower logo">
-            <a href="https://github.com/shower/shower">See more on GitHub</a>
-        </h2>
-        <style>
-            #see-more h2 {
-                font-size: 100px
-            }
-
-            #see-more img {
-                width: 0.72em;
-                height: 0.72em;
-            }
-        </style>
-    </section>-->
 
     <div class="progress"></div>
 
