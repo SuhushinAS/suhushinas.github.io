@@ -4,8 +4,25 @@
     <title>Renderless Components в React. Как интегрировать неинтегрируемое?</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="favicon.ico" rel="shortcut icon" />
-    <link href="shower/themes/ribbon/styles/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="favicon/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
     <style>
         html {
             height: 100%;
@@ -13,7 +30,24 @@
         }
 
         .shower {
+            --slide-gap: 100px;
             --slide-ratio: calc(16 / 9);
+            --slide-width: 1024px;
+            --slide-height: calc(
+                var(--slide-width) / var(--slide-ratio)
+            );
+
+            --color-blue: #6897bb;
+            --color-blue-lighter: #6897bb;
+            --color-red: #cc0000;
+            --color-yellow: #fafaa2;
+            --color-grey: #585a5e;
+            --color-fill: rgba(88, 90, 94, 0.1);
+            --color-line: rgba(88, 90, 94, 0.5);
+
+            --ribbon-size: 50px;
+            --progress-size: 10px;
+
             --f-z_xxl: 88px;
             --f-z_xl: 64px;
             --f-z_l: 46px;
@@ -21,6 +55,24 @@
             --f-z_s: 24px;
             --f-z_xs: 16px;
             --f-z_xxs: 12px;
+        }
+
+        .slide {
+            background-color: #2b2b2b;
+        }
+
+        .slide h2 {
+            color: #a9b7c6;
+        }
+
+        .slide:after {
+            background-image: url('pictures/ribbon.svg');
+            color: #2b2b2b;
+            font-weight: bold;
+        }
+
+        .progress:before {
+            background-color: #305d78;
         }
 
         .f-z_xxl {
@@ -221,6 +273,7 @@
         .link_us:focus,
         .link_us:hover {
             color: transparent;
+            cursor: none;
             font-weight: 600;
             transition: all calc(6 * var(--us-speed)) ease calc(2 * var(--us-speed)),
             color calc(3 * var(--us-speed)) ease,
@@ -237,12 +290,14 @@
             pointer-events: all;
             transition: all calc(6 * var(--us-speed)) ease calc(2 * var(--us-speed)),
             color calc(3 * var(--us-speed)) ease,
-            background-color calc(3 * var(--us-speed)) ease;
+            background-color calc(3 * var(--us-speed)) ease,
+            box-shadow calc(6 * var(--us-speed)) ease calc(6 * var(--us-speed));
         }
 
         .link_us:focus:before,
         .link_us:hover:before {
             background-color: #000000;
+            box-shadow: 0 0 23px -1px rgba(255, 255, 255, 1);
         }
 
         .link_us:focus:after,
@@ -321,10 +376,9 @@
         </div>
         <style>
             #intro {
-                /*background-color: #282c34;*/
                 --logo-animation-time: 12s;
                 --logo-offset: 150px;
-                --logo-offset-x: 75px;
+                --logo-offset-x: 85px;
                 --logo-offset-y: 129.903810568px;
                 --logo-size: 50px;
             }
@@ -498,11 +552,11 @@
                 <div class="col">
                     <div class="box_cover">
                         <div class="stack">
-                            <div class="stack__section stack__section_wide">
+                            <div class="stack__section">
                                 <img class="stack__img" src="pictures/react.svg" alt="react">
                             </div>
                             <div class="stack__section stack__section_divider stack__section_narrow"></div>
-                            <div class="stack__section stack__section_wide stack__section_hidden">
+                            <div class="stack__section stack__section_hidden">
                                 <img class="stack__img" src="pictures/leaflet.svg" alt="react">
                                 <img class="stack__img" src="pictures/websocket.svg" alt="redux">
                             </div>
@@ -526,17 +580,14 @@
             .stack__section_narrow {
                 width: 300px;
             }
-            .stack__section_wide {
-                width: 500px;
-            }
             .stack__section_hidden {
                 opacity: 0;
             }
             .stack__section_divider {
-                border-bottom: 1px solid var(--color-grey);
+                border-bottom: 1px solid #A9B7C6;
             }
             .stack__img {
-                height: 60px;
+                height: 100px;
                 margin: 10px;
                 vertical-align: middle;
             }
@@ -554,11 +605,11 @@
                 <div class="col">
                     <div class="box_cover">
                         <div class="stack">
-                            <div class="stack__section stack__section_wide">
+                            <div class="stack__section">
                                 <img class="stack__img" src="pictures/react.svg" alt="react">
                             </div>
                             <div class="stack__section stack__section_divider stack__section_narrow"></div>
-                            <div class="stack__section stack__section_wide">
+                            <div class="stack__section">
                                 <img class="stack__img" src="pictures/leaflet.svg" alt="react">
                                 <img class="stack__img" src="pictures/websocket.svg" alt="redux">
                             </div>
@@ -654,7 +705,7 @@
         </div>
     </section>
 
-    <section class="slide image" id="geo-json">
+    <section class="slide slide_code image" id="geo-json">
         <div class="box">
             <div class="row">
                 <div class="col">
@@ -663,7 +714,7 @@
             </div>
             <div class="row h_full">
                 <div class="col">
-                    <div class="box_cover">
+                    <div class="box_cover o_h">
                         <img src="pictures/geo-json.png" alt="GeoJSON">
                     </div>
                 </div>
@@ -703,6 +754,16 @@
                 </div>
             </div>
         </div>
+        <style>
+            #bounds img {
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        </style>
     </section>
 
     <section class="slide image" id="map-view-2">
@@ -756,10 +817,10 @@
                 width: 824px;
             }
             .map-view-joke__checkbox:checked + .map-view-joke__label .map-view-joke__img {
-                width: 14832px;
-                margin-left: -5760px;
-                margin-top: -3834px;
-                transition: all 2s linear;
+                width: 11244px;
+                margin-left: -5080px;
+                margin-top: -2860px;
+                transition: all 1.5s ease-in;
             }
         </style>
     </section>
@@ -792,7 +853,7 @@
                 <div class="col">
                     <div class="box_cover t-a_c">
                         <a href="https://suhushinas.github.io/2019-04-27_renderless-components-example/#/example-map" target="_blank">
-                            <img src="pictures/map-example.png" alt="Map Example">
+                            <img src="pictures/map-example.svg" alt="Map Example">
                         </a>
                     </div>
                 </div>
@@ -862,7 +923,7 @@
                 <div class="col">
                     <div class="box_cover t-a_c">
                         <a href="https://suhushinas.github.io/2019-04-27_renderless-components-example/#/example-socket" target="_blank">
-                            <img src="pictures/socket-example.png" alt="Map Example">
+                            <img src="pictures/socket-example.svg" alt="Map Example">
                         </a>
                         <p>
                             <a href="https://suhushinas.github.io/2019-04-27_renderless-components-example/#/socket-generator" target="_blank">socket-generator</a>
@@ -884,7 +945,7 @@
                 <div class="col">
                     <div class="box_cover t-a_c">
                         <a href="https://suhushinas.github.io/2019-04-27_renderless-components/" target="_blank">
-                            <img src="pictures/self-link.png" alt="Map Example">
+                            <img src="pictures/self-link.svg" alt="Map Example">
                         </a>
                     </div>
                 </div>
