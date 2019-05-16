@@ -3,6 +3,7 @@
 * [Интеграция карт Leaflet с React](/2018-06-09_inner-conf/index.html)
 * [Адаптивная вёрстка](/2018-12-01_responsive-layout/index.html)
 * [Асинхронный JavaScript](/2019-01-19_async-js/index.html)
+* [Renderless Components в React. Как интегрировать неинтегрируемое?](/2019-04-27_renderless-components/index.html)
 
 ### Разработки
 * [HTML Layout kit](https://github.com/SuhushinAS/html-layout-kit)
