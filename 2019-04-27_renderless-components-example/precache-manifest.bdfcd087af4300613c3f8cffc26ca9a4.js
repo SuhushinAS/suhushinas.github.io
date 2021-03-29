@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "2ed91689e9ce31631d36",
+    "revision": "ea4271e229ec71498fbb",
     "url": "./static/css/main.01d465fc.chunk.css"
   },
   {
-    "revision": "2ed91689e9ce31631d36",
-    "url": "./static/js/main.0d65003f.chunk.js"
+    "revision": "ea4271e229ec71498fbb",
+    "url": "./static/js/main.4869ee6c.chunk.js"
   },
   {
     "revision": "8c97409f0ee389fe75da",
@@ -20,20 +20,16 @@ self.__precacheManifest = [
     "url": "./static/js/2.13ae7eb2.chunk.js"
   },
   {
-    "revision": "5fb8b6fc36c4131b485e76b5834c02f7",
-    "url": "./static/media/ubuntu-mono-latin-700.5fb8b6fc.woff2"
+    "revision": "469ee47867fa81c9eb1677cb6df36493",
+    "url": "./static/media/ubuntu-mono-latin-400.469ee478.woff2"
   },
   {
     "revision": "84924f07cdf2bc11727cbdb92bdecb60",
     "url": "./static/media/ubuntu-mono-latin-400.84924f07.woff"
   },
   {
-    "revision": "469ee47867fa81c9eb1677cb6df36493",
-    "url": "./static/media/ubuntu-mono-latin-400.469ee478.woff2"
-  },
-  {
-    "revision": "ad755437adc718d060c2ebe9e76b47f6",
-    "url": "./static/media/ubuntu-mono-latin-700.ad755437.woff"
+    "revision": "5fb8b6fc36c4131b485e76b5834c02f7",
+    "url": "./static/media/ubuntu-mono-latin-700.5fb8b6fc.woff2"
   },
   {
     "revision": "cb47101ae05a75cababcf320c3f18521",
@@ -44,15 +40,19 @@ self.__precacheManifest = [
     "url": "./static/media/ubuntu-mono-latin-400italic.b058de1f.woff2"
   },
   {
-    "revision": "5c6270425bb30b6ba25abbb42c628221",
-    "url": "./static/media/ubuntu-mono-latin-700italic.5c627042.woff2"
+    "revision": "ad755437adc718d060c2ebe9e76b47f6",
+    "url": "./static/media/ubuntu-mono-latin-700.ad755437.woff"
   },
   {
     "revision": "449ed936ed1e019ed9115637e3d8549c",
     "url": "./static/media/ubuntu-mono-latin-700italic.449ed936.woff"
   },
   {
-    "revision": "7c441781233056b99df42c45b5086013",
+    "revision": "5c6270425bb30b6ba25abbb42c628221",
+    "url": "./static/media/ubuntu-mono-latin-700italic.5c627042.woff2"
+  },
+  {
+    "revision": "001c1993305ebd403ae14dc1943d03dc",
     "url": "./index.html"
   }
 ];
