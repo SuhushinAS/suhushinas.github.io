@@ -13,4 +13,4 @@
 * [React Starter kit](https://github.com/SuhushinAS/react-starter-kit)
 
 ### Прочее
-* [Анимация на canvas](/us-jelly/index.html) по [уроку](https://youtu.be/XqB_Ulfpd0w) Юрия Артюха.
+* [Анимация на canvas](/us-jelly/index.html) (по [уроку](https://youtu.be/XqB_Ulfpd0w) Юрия Артюха)
