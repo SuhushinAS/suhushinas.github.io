@@ -6,7 +6,7 @@
 * [Адаптивная вёрстка](/2018-12-01_responsive-layout/index.html)
 * [Асинхронный JavaScript](/2019-01-19_async-js/index.html). [Видео](https://youtu.be/p0d8p9C2aYs)
 * Основы React Redux [Репозиторий](https://github.com/SuhushinAS/react-course). [Видео](https://youtu.be/UNWYn5LFHkQ)
-* Как профессионально развиваться. Личный опыт. [Видео](https://youtu.be/WSwZlCM4sJk), [Презентация](https://docs.google.com/presentation/d/1Hr-PR5tOIQQ3D_nAveByAA1PbsESGZf3Yc92DUrYnjQ)
+* Как профессионально развиваться. Личный опыт. [Видео](https://youtu.be/WSwZlCM4sJk). [Презентация](https://docs.google.com/presentation/d/1Hr-PR5tOIQQ3D_nAveByAA1PbsESGZf3Yc92DUrYnjQ)
 
 ### Разработки
 * [HTML Layout kit](https://github.com/SuhushinAS/html-layout-kit)
