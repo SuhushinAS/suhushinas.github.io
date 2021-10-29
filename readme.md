@@ -12,5 +12,12 @@
 * [HTML Layout kit](https://github.com/SuhushinAS/html-layout-kit)
 * [React Starter kit](https://github.com/SuhushinAS/react-starter-kit)
 
+### CodePen
+* [Визуализация работы событий](https://codepen.io/SuhushinAS/pen/QWyEwow)
+* [Плавное изменение CSS-свойств от размера экрана](https://codepen.io/SuhushinAS/pen/yLLXjXw)
+* [Адаптивные изображения](https://codepen.io/SuhushinAS/pen/qQMJKb)
+* [Соотношения сторон для видео](https://codepen.io/SuhushinAS/pen/EOyrjL)
+* [CodePen на минималках](https://codepen.io/SuhushinAS/pen/GMpgjv)
+
 ### Прочее
 * [Анимация на canvas](/us-jelly/index.html) (по [уроку](https://youtu.be/XqB_Ulfpd0w) Юрия Артюха)
