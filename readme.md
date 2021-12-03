@@ -20,4 +20,6 @@
 * [CodePen на минималках](https://codepen.io/SuhushinAS/pen/GMpgjv)
 
 ### Прочее
-* [Анимация на canvas](/us-jelly/index.html) (по [уроку](https://youtu.be/XqB_Ulfpd0w) Юрия Артюха)
+* Анимация на canvas (по [уроку](https://youtu.be/XqB_Ulfpd0w) Юрия Артюха)
+  * [Userstory](/us-jelly/index.html)
+  * [Evrone](/evrone-jelly/index.html)
