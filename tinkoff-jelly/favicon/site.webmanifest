@@ -59,8 +59,8 @@
     }
   ],
   "id": "/tinkoff-jelly/index.html",
-  "start_url": "/tinkoff-jelly/index.html",
   "name": "Tinkoff Jelly",
   "short_name": "Tinkoff Jelly",
+  "start_url": "/tinkoff-jelly/index.html",
   "theme_color": "#ffffff"
 }
