@@ -51,7 +51,13 @@
       "type": "image/png"
     },
     {
-      "purpose": "any maskable",
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "/tinkoff-jelly//favicon/android-chrome-512x512.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
       "sizes": "512x512",
       "src": "/tinkoff-jelly//favicon/android-chrome-512x512.png",
       "type": "image/png"
