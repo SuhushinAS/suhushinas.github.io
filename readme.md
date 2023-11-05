@@ -13,6 +13,7 @@
 * [React Starter kit](https://github.com/SuhushinAS/react-starter-kit)
 * [Frontend Best Practices](https://github.com/SuhushinAS/best-practices)
 * [Design Checklist](https://github.com/SuhushinAS/design-checklist)
+* Покер-планер [Репозиторий](https://github.com/SuhushinAS/planning-poker). [Приложение](https://suhushinas.github.io/planning-poker/)
 
 ### CodePen
 * [Визуализация работы событий](https://codepen.io/SuhushinAS/pen/QWyEwow)
