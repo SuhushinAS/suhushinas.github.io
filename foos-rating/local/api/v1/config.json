@@ -1,12 +1,12 @@
 {
   "urls": {
     "nsk": {
-      "full": "https://proxy.corsfix.com/?https%3A%2F%2Fdyp-nsk.gear54.me%2Fapi%2Fratings",
-      "season": "https://proxy.corsfix.com/?https%3A%2F%2Fdyp-nsk.gear54.me%2Fapi%2Fratings%2Fseason"
+      "full": "https://api.allorigins.win/raw?url=https%3A%2F%2Fdyp-nsk.gear54.me%2Fapi%2Fratings",
+      "season": "https://api.allorigins.win/raw?url=https%3A%2F%2Fdyp-nsk.gear54.me%2Fapi%2Fratings%2Fseason"
     },
     "tsk": {
-      "full": "https://proxy.corsfix.com/?https%3A%2F%2Ftsk.gear54.me%2Fapi%2Fratings",
-      "season": "https://proxy.corsfix.com/?https%3A%2F%2Ftsk.gear54.me%2Fapi%2Fratings%2Fseason"
+      "full": "https://api.allorigins.win/raw?url=https%3A%2F%2Ftsk.gear54.me%2Fapi%2Fratings",
+      "season": "https://api.allorigins.win/raw?url=https%3A%2F%2Ftsk.gear54.me%2Fapi%2Fratings%2Fseason"
     }
   }
 }
