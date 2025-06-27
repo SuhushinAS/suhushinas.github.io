@@ -1,0 +1,81 @@
+{
+  "background_color": "#222423",
+  "categories": [
+    "sports"
+  ],
+  "description": "Foos Rating",
+  "dir": "ltr",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "minimal-ui"
+  ],
+  "icons": [
+    {
+      "sizes": "36x36",
+      "src": "/foos-rating/favicon/android-chrome-36x36.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "48x48",
+      "src": "/foos-rating/favicon/android-chrome-48x48.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "72x72",
+      "src": "/foos-rating/favicon/android-chrome-72x72.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "96x96",
+      "src": "/foos-rating/favicon/android-chrome-96x96.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "144x144",
+      "src": "/foos-rating/favicon/android-chrome-144x144.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "192x192",
+      "src": "/foos-rating/favicon/android-chrome-192x192.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "256x256",
+      "src": "/foos-rating/favicon/android-chrome-256x256.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "384x384",
+      "src": "/foos-rating/favicon/android-chrome-384x384.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "src": "/foos-rating/favicon/android-chrome-512x512.png",
+      "type": "image/png"
+    }
+  ],
+  "id": "foos-rating",
+  "lang": "ru",
+  "name": "Foos Rating",
+  "orientation": "any",
+  "screenshots": [
+    {
+      "form_factor": "narrow",
+      "sizes": "750x1334",
+      "src": "/foos-rating/favicon/screen-750x1334.png",
+      "type": "image/png"
+    },
+    {
+      "form_factor": "wide",
+      "sizes": "2048x1536",
+      "src": "/foos-rating/favicon/screen-2048x1536.png",
+      "type": "image/png"
+    }
+  ],
+  "short_name": "Foos Rating",
+  "start_url": "/foos-rating",
+  "theme_color": "#222423"
+}

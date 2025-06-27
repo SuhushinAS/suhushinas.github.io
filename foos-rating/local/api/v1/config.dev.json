@@ -1,0 +1,12 @@
+{
+  "urls": {
+    "nsk": {
+      "full": "/nsk/api/ratings",
+      "season": "/nsk/api/ratings/season"
+    },
+    "tsk": {
+      "full": "/tsk/api/ratings",
+      "season": "/tsk/api/ratings/season"
+    }
+  }
+}
